@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@100;400;500;600;700;800;900&family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+.text-shadow {
+    text-shadow: 2px 2px 6px rgb(213, 211, 211);
+}
+
+.text-shadow-white {
+    text-shadow: 2px 2px 6px rgb(60, 59, 59);
+}
+
+.to-hide {
+    @apply opacity-0 -translate-x-3/4;
+    transition: all 0.7s;
+}
+
+.to-show {
+    @apply opacity-100 translate-x-0;
+    transition: all 0.7s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#grid-container {
+    @apply grid grid-cols-12 font-poppins;
+}
+
+
+
+/*------------------------------------- HEADER -------------------------------------------------------*/
+
+#grid-container header {
+    @apply col-span-full flex justify-between sticky items-center top-0 left-0 right-0 px-10 py-3;
+    @apply bg-tallesBlackBlack text-tallesGrayLight transition-all z-50;
+
+    /*Breakpoint*/
+
+}
+
+header .logo {
+    @apply w-56;
+
+    /*breakpoints*/
+    @apply tbl:w-14;
+}
+
+#logo-nome {
+    @apply block;
+
+    /*breakpoint*/
+    @apply tbl:hidden;
+}
+
+#logo-isolada {
+    @apply hidden;
+
+    /*breakpoint*/
+    @apply tbl:block;
+}
+
+.nav_logo span {
+    @apply inline-block animate-bounce ml-1 text-4xl text-tallesGrayLight;
+}
+
+.nav_logo a {
+    @apply font-semibold;
+}
+
+header label {
+    @apply absolute right-3 text-2xl hidden;
+
+    /*breakpoints*/
+    @apply tbl:block;
+}
+
+label i {
+    @apply text-tallesGrayLight;
+}
+
+/*OCULTA BOTAO MENU QUANDO CHECK MARCADO*/
+input:checked~label .btn-menu {
+    @apply !hidden;
+}
+
+/* MOSTRA BOTAO X QUANDO CHECK MARCADO*/
+input:checked~label .btn-x {
+    @apply !block;
+}
+
+
+header nav {
+    @apply flex gap-10 relative transition-all bg-tallesBlackBlack font-semibold;
+
+    /*breakpoints*/
+    /*Quando menor que 860px, a nav irá virará um menu lateral*/
+    @apply tbl:fixed tbl:top-2 tbl:left-0 tbl:h-full tbl:flex-col tbl:pl-7 tbl:pt-10 tbl:w-56 tbl:-translate-x-60 tbl:border-r-2 tbl:border-gray-700;
+}
+
+/*Mostra a nav que está oculta com o translate de volta para 0*/
+input:checked~nav {
+    @apply tbl:translate-x-0;
+}
+
+nav a {
+    @apply text-tallesGrayLight hover:text-tallesBlueLight transition-all;
+}
+
+
+/*__________________________________________________ FIM DO HEADER __________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------- HERO ------------------------------------------------*/
+
+#hero {
+    @apply col-span-full flex items-center justify-between bg-tallesBlack text-tallesGrayLight px-14 min-h-screen overflow-hidden relative;
+
+    /*Breakpoint*/
+    @apply lghero:justify-around;
+
+    @apply tbhero:flex-col tbhero:pt-20 tbhero:justify-center tbhero:items-center;
+
+    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*-------LADO ESQUERDO, SUBTITULOS E BOTÕES*/
+#hero #info-profile-wrapped {
+    @apply -translate-y-10;
+
+    /*breakpoint*/
+    @apply tbhero:flex tbhero:flex-col tbhero:items-center;
+}
+
+#info-profile-wrapped .subtitles {
+    @apply flex flex-col gap-2;
+
+    /*breakpoint*/
+    @apply tbhero:items-center;
+}
+
+
+.subtitles h1 {
+    @apply text-7xl font-bold animate-slideRight transition-all text-nowrap;
+
+    /*Breakpoint*/
+    @apply deskhero:text-5xl mobhero:text-4xl smhero:text-3xl;
+}
+
+.subtitles h1 #dot-name {
+    @apply text-8xl inline-block animate-bounce text-tallesBlueLight;
+
+    /*breakpoint*/
+    @apply deskhero:text-6xl mobhero:text-5xl;
+}
+
+
+.subtitles h2 {
+    @apply text-5xl text-tallesBlueLight font-semibold animate-slideLeft transition-all;
+
+    /*breakpoint*/
+    @apply deskhero:text-3xl mobhero:text-2xl smhero:text-xl;
+}
+
+
+.subtitles h2 #profession {}
+
+
+.subtitles p {
+    @apply animate-slideRight transition-all w-8/12 transition-all;
+
+    /*breakpoint*/
+    @apply deskhero:w-2/3 tbhero:text-sm mobhero:text-ltt mobhero:w-10/12;
+}
+
+/* CONTAINER DOS BOTÕES*/
+.buttons-wrapped {
+    @apply flex gap-3 mt-6;
+}
+
+.buttons-wrapped a {
+    @apply flex justify-center items-center;
+}
+
+.buttons-wrapped #plans {
+    @apply bg-tallesBlueLight py-3 px-5 rounded text-tallesBlack font-semibold border-2 border-transparent transition-all;
+    @apply hover:bg-tallesBlack hover:text-tallesBlueLight hover:border-tallesBlueLight;
+
+    @apply animate-slideRight mobhero:text-sm mobhero:px-4 mobhero:py-2;
+}
+
+.buttons-wrapped #whats {
+    @apply border-2 p-2 border-tallesBlueLight rounded text-tallesBlueLight font-semibold transition-all;
+    @apply hover:bg-tallesBlueLight hover:text-tallesBlack animate-slideLeft;
+
+    /*Breakpoint*/
+    @apply mobhero:text-sm mobhero:px-3 mobhero:py-2;
+}
+
+#whats i {
+    @apply text-4xl;
+}
+
+/*------LADO DIREITO, FOTO DO PROFILE HERO*/
+#hero #photo-profile-wrapped {
+    @apply w-400 animate-slideLeft;
+
+    /*breakpoint*/
+    @apply tbhero:w-64;
+}
+
+#hero #photo-profile-wrapped img {
+    @apply w-full rounded-full border-b-8 border-tallesBlack;
+}
+
+
+/*LETREIRO*/
+#hero #sign {
+    @apply absolute top-1 -right-80 text-tallesBlackLight2 font-semibold text-sm animate-cloudLeft;
+
+    /*Breakpoint*/
+    @apply mobhero:text-ltt;
+}
