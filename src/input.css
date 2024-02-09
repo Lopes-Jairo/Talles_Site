@@ -216,11 +216,11 @@ nav a {
 }
 
 .buttons-wrapped #whats {
-    @apply border-2 p-2 border-tallesBlueLight rounded text-tallesBlueLight font-semibold transition-all;
+    @apply border-2 p-2 border-tallesBlueLight rounded text-tallesBlueLight font-semibold transition-all text-nowrap;
     @apply hover:bg-tallesBlueLight hover:text-tallesBlack animate-slideLeft;
 
     /*Breakpoint*/
-    @apply mobhero:text-sm mobhero:px-3 mobhero:py-2;
+    @apply mobhero:text-sm mobhero:px-2 mobhero:py-2;
 }
 
 #whats i {
