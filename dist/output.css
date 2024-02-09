@@ -1074,6 +1074,7 @@ nav a:hover{
 }
 
 .buttons-wrapped #whats{
+  text-wrap: nowrap;
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -1116,8 +1117,8 @@ nav a:hover{
 
 @media (max-width: 650px){
   .buttons-wrapped #whats{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 0.875rem;
