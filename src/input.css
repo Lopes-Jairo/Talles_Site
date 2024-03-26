@@ -54,7 +54,7 @@ html {
 }
 
 #grid-container {
-    @apply grid grid-cols-12 font-poppins;
+    @apply grid grid-cols-12 font-poppins min-h-screen;
 }
 
 
