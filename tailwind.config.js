@@ -33,12 +33,21 @@ module.exports = {
 
         floatImage: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-3.5rem)' }
+          '50%': { transform: 'translateY(-1rem)' }
         },
 
         cloudLeft: {
           '0%': { opacity: '1', transform: 'translateX(110%)' },
           '100%': { opacity: '1', transform: 'translateX(-100vw)' }
+        },
+
+
+        scrolling: {
+          '0%': { opacity: '0', transform: 'translateY(100%) scale(0.5)' },
+          '5%, 20%': { opacity: '0.4', transform: 'translateY(100%) scale(0.7)' },
+          '25%, 40%': { opacity: '1', transform: 'translateY(0%) scale(1)' },
+          '45%, 60%': { opacity: '0.4', transform: 'translateY(-100%) scale(0.7)' },
+          '65%, 100%': { opacity: '0', transform: 'translateY(-100%) scale(0.5)' },
         }
 
       },
@@ -49,8 +58,9 @@ module.exports = {
         slideLeft: 'slideLeft 3s 0.5s ease-in forwards',
         slideRight: 'slideRight 3s 0.5s ease forwards',
         zoomIn: 'zoomIn 1s 0.2s ease forwards',
-        floatImage: 'floatImage 4s 0.2s ease-in-out infinite',
+        floatImage: 'floatImage 3s 0.2s ease-in-out infinite',
         cloudLeft: 'cloudLeft 32s linear infinite',
+        scrolling: 'scrolling 15s linear infinite',
 
       },
 
@@ -100,16 +110,23 @@ module.exports = {
 
 
         // Telas adaptáveis para o PLANS 
-        'lgplans': { 'min': '1600px' },
-        'deskPlans': { 'max': '1599px' },
-        'mobPlans': { 'max': '470px' },
-        'plansCard': { 'min': '490px', 'max': '1011px' },
+        'tabplans': { 'max': '1049px' },
+        'mobPlans': { 'max': '660px' },
+        'smallPlans': { 'max': '450px' },
 
+        // Telas adaptáveis para RESULTADOS
+        'tablRes': { 'max': '1029px' },
+        'mobRes': { 'max': '450px' },
 
+        // Telas adaptáveis para FEEDBACK
+        'tablFD': { 'max': '1023px' },
+        'mobFD': { 'max': '639px' },
+        'deskIcone': { 'min': '1023px' },
       },
 
       spacing: {
         '400': '400px',
+        '500': '500px',
         '5percenet': '5%'
       },
 

@@ -20,24 +20,27 @@
 }
 
 .to-hide {
-    @apply opacity-0 -translate-x-3/4;
-    transition: all 0.7s;
+    @apply opacity-0 -translate-x-3/4 ease-in;
+    transition: all 1.2s;
 }
 
 .to-show {
-    @apply opacity-100 translate-x-0;
-    transition: all 0.7s;
+    @apply opacity-100 translate-x-0 ease-out;
+    transition: all 1.2s;
 }
 
 
 
 /*----------CONFIGURANDO TITULO DA SESSÃO PARA TODAS AS SESSÕES*/
 .title_global_wrapped {
-    @apply flex justify-center pt-5percenet pb-28;
+    @apply flex justify-center pt-5percenet pb-28 pt-36;
 }
 
 .title_global_wrapped h1 {
-    @apply text-4xl font-semibold text-white;
+    @apply text-5xl font-semibold text-tallesGrayLight transition-all duration-500;
+
+    /*breakpoint*/
+    @apply mobile:text-4xl;
 }
 
 
@@ -301,7 +304,7 @@ nav a {
 /*----------------------------------------------------------- ABOUT ------------------------------------------------------------*/
 
 #about {
-    @apply col-span-full text-white bg-tallesBlackBlack pb-5percenet;
+    @apply col-span-full text-tallesGrayLight bg-tallesBlackBlack pb-5percenet;
 
 
 }
@@ -386,7 +389,9 @@ nav a {
 }
 
 .topics-about .p-topics {
-    @apply flex gap-2 bg-tallesBlackEasy shadow-2xl p-5 rounded;
+    @apply flex gap-2 shadow-2xl p-5 rounded;
+    background: linear-gradient(to right bottom, rgba(48, 48, 48, 0.65), rgba(32, 30, 30, 0.6));
+
 }
 
 
@@ -421,7 +426,7 @@ nav a {
 /*---------------------------------------------------------- PLANS -----------------------------------------------------------------*/
 
 #plans {
-    @apply col-span-full pb-5percenet;
+    @apply col-span-full pb-5percenet flex flex-col items-center;
 
     background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_About/gym.jpg');
     background-repeat: no-repeat;
@@ -430,135 +435,525 @@ nav a {
 
 }
 
-
-#plans .plans-container {
-    @apply flex gap-5 px-5 justify-center flex-wrap transition-all;
-
-    /*Breakpoint*/
-    @apply mobPlans:px-4;
-
-    /*marcação*/
-    /* @apply bg-purple-500 p-3; */
-}
-
-.plans-container .plans-uniq {
-    @apply flex gap-5 justify-around max-w-2xl shadow-2xl rounded overflow-hidden;
-    @apply border-2 border-tallesGrayLight bg-tallesBlack border-l-4 border-l-tallesBlueLight relative cursor-pointer;
+#plans #card-plans-wrapped {
+    @apply grid grid-cols-3 gap-10 px-5 pt-10 container w-full;
 
     /*Breakpoint*/
-    @apply mobPlans:w-full plansCard:w-full;
-    /*marcação*/
-    /*  @apply bg-green-500; */
+    @apply tabplans:grid-cols-2 mobPlans:grid-cols-1;
 
-
-}
-
-/*LADO DO PREÇO DO PLANO, ESQUERDO*/
-.plans-uniq .price {
-    @apply flex flex-col justify-center items-center gap-5 pl-7 py-4;
-
-    /*marcação*/
-    /* @apply bg-rose-600; */
-}
-
-
-.price .title-price-wrapped {
-    @apply flex items-center;
-
-    /* @apply bg-yellow-300 p-3; */
-}
-
-.title-price-wrapped span {
-    @apply text-2xl font-semibold -translate-y-2 text-tallesGrayLight;
-
-    /*Breakpoint*/
-    @apply mobPlans:text-xl;
-}
-
-.title-price-wrapped h2 {
-    @apply text-5xl text-tallesBlueLight;
-
-    /*Breakpoint*/
-    @apply mobPlans:text-3xl;
-
-    /*marcação*/
-    /* @apply bg-gray-700 p-3; */
-}
-
-.price p {
-    @apply text-tallesGrayLight text-nowrap;
-
-    /*marcação*/
-    /*  @apply bg-sky-300 p-3; */
-}
-
-
-
-/*LADO DOS BENEFICIOS DO PLANO, DIREITO*/
-.plans-uniq .bonus {
-    @apply flex flex-col gap-4 pr-14 py-3;
-
-
-    /*marcação*/
-    @apply bg-rose-700;
-}
-
-.bonus h3 {
-    @apply text-tallesGrayLight text-center text-xl font-semibold;
-
-    /*Breakpoint*/
-    @apply mobPlans:text-lg;
-
-    /*marcação*/
-    /* @apply bg-yellow-500 p-3; */
-}
-
-
-.bonus .benefit-wrapped {
-    @apply w-full;
-    /*marcação*/
-    /*  @apply bg-amber-800 p-3; */
-}
-
-
-.benefit-wrapped p {
-    @apply flex items-center text-nowrap text-tallesGrayLight;
-
-    /*Breakpoint*/
-    @apply mobPlans:text-sm;
-    /*marcação*/
-    /*  @apply bg-orange-500 p-3 mb-2; */
-}
-
-.bonus p i {
-    @apply text-tallesBlueLight text-2xl;
-}
-
-
-/*SLIDE DE ANIMAÇÃO DOS CARDS*/
-.slide-plans {
-    @apply absolute top-0 left-0 right-0 bottom-0;
-    @apply flex justify-center items-center transition-all duration-700;
-    @apply -translate-x-full;
-
-    /*  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)); */
-    background-image: linear-gradient(to bottom, rgb(51, 153, 255), rgb(51, 153, 255, 0.6), rgba(0, 0, 0, 0.5))
-}
-
-.plans-uniq:hover .slide-plans {
-    @apply translate-x-0;
-}
-
-.slide-plans .buttons-plans-wrapped {
-    @apply flex gap-5;
 
     /*Marcação*/
-    /* @apply bg-rose-500 p-3; */
+    /* @apply bg-blue-900; */
 }
 
-.buttons-plans-wrapped a {
-    @apply bg-tallesBlack text-tallesBlueLight py-4 px-2 flex-1 flex justify-center items-center;
-    @apply min-w-32 font-semibold border-2 border-tallesBlueLight;
+
+/*Card unico inteiro*/
+#card-plans-wrapped .card-plans-unique {
+    @apply rounded-lg text-center overflow-hidden hover:shadow-2xl transition-all duration-200 px-7 pt-4;
+
+    @apply max-w-md shadow-2xl border-r-2 border-tallesBlueLight;
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.95), rgba(32, 30, 30, 0.3));
+
+    /*Breakpoint*/
+    @apply bg-[#262626] mobPlans:m-auto;
+
+
+    /*Marcação*/
+    /* @apply bg-rose-500; */
 }
+
+/*-----PARTE SUPERIOR DO CARD*/
+.card-plans-unique .top-card-plans {
+    @apply w-full py-5 border-b border-gray-700;
+
+    /*Marcação*/
+    /* @apply bg-green-600; */
+}
+
+.top-card-plans h2 {
+    @apply font-bold text-3xl text-tallesGrayLight;
+}
+
+.top-card-plans h3 {
+    @apply font-extrabold text-tallesBlueLight text-3xl mt-2;
+}
+
+/*_____ FIM PARTE SUPERIOR CARD*/
+
+
+
+
+
+/*-----PARTE MEDIA DO CARD*/
+.card-plans-unique .mid-card-plans {
+    @apply my-5 flex flex-col gap-5;
+
+    /*Marcação*/
+    /* @apply bg-yellow-600 p-2; */
+}
+
+.mid-card-plans .star-icon-wrapped {}
+
+
+.star-icon-wrapped i {
+    @apply text-yellow-400 text-4xl;
+}
+
+
+.mid-card-plans p {
+    @apply text-tallesGrayLight text-sm pt-2;
+}
+
+/*_____ FIM PARTE MEDIA CARD*/
+
+
+
+
+/*-----PARTE INFERIOR DO CARD*/
+
+.card-plans-unique .bottom-card-plans {
+    @apply flex gap-2 leading-8 mb-10 text-lg font-light px-4;
+
+    /*Marcação*/
+    /* @apply bg-sky-600; */
+}
+
+.bottom-card-plans a {
+    @apply w-full block bg-tallesBlackBlack font-medium text-xl text-tallesBlueLight py-3 rounded-xl transition duration-700 ease-in-out;
+
+    /*Hover*/
+    @apply hover:bg-tallesBlueLight hover:text-tallesBlackBlack hover:shadow-2xl;
+}
+
+/*_____ FIM PARTE INFERIOR CARD*/
 
 /*_________________________________________________________FIM PLANS ________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------- RESULTADOS -----------------------------------------------------------------*/
+#results {
+    @apply col-span-full flex flex-col justify-center items-center bg-tallesBlackBlack pb-5percenet;
+
+}
+
+#results #zip-results {
+    @apply container flex justify-center items-center gap-16 px-8;
+
+    /*Breakpoint*/
+    @apply tablRes:flex-col tablRes:gap-5;
+
+    /*Marcação*/
+    /* @apply bg-purple-500; */
+}
+
+#zip-results input {
+    @apply hidden;
+}
+
+
+/*CONTAINER ONDE FICA APENAS OS TITULOS, PARAGRAFOS*/
+#zip-results #titles-zip {
+    @apply flex flex-col items-center gap-4 w-full max-w-xl;
+
+    /*Breakpoint*/
+    @apply tablRes:gap-8;
+
+    /*Marcação*/
+    /* @apply bg-green-600 p-3; */
+}
+
+#titles-zip #labels-zip {
+    @apply flex gap-2 order-2;
+
+    /*Marcação*/
+    /* @apply bg-gray-700; */
+}
+
+
+#labels-zip label {
+    @apply block w-5 h-5 bg-tallesGrayLight cursor-pointer rounded-full;
+
+}
+
+#titles-zip #sub-titles-zip {
+    @apply flex flex-col gap-5 transition-all duration-500;
+
+    /*Breakpoint*/
+    @apply mobRes:text-sm;
+
+    /*Marcação*/
+    /* @apply bg-blue-700; */
+}
+
+#sub-titles-zip h1 {
+    @apply text-3xl text-center font-medium tracking-wide text-tallesBlueLight;
+
+    /*Breakpoint*/
+    @apply md:text-4xl;
+}
+
+#sub-titles-zip p {
+    @apply mt-4 text-tallesGrayLight;
+}
+
+
+
+
+
+/*CONTAINER ONDE FICA AS IMAGENS*/
+#img-zip {
+    @apply flex flex-col items-center justify-center;
+
+    /*breakpoint*/
+
+
+    /*Marcação*/
+    /*  @apply bg-rose-700 p-2; */
+}
+
+
+#img-zip #images {
+    @apply flex w-[500px] h-[400px] overflow-hidden transition-all duration-500;
+
+    /*Breakpoint*/
+    @apply tablRes:w-[400px] tablRes:h-[350px] mobRes:w-[350px] mobRes:h-[300px];
+
+    /*Marcação*/
+    /* @apply bg-blue-600 p-2; */
+}
+
+#img-zip #images img {
+    @apply hidden object-cover w-full h-full max-w-2xl rounded-md;
+}
+
+
+
+
+
+/*------- USANDO OS INPUTS PARA MOSTRAR AS IMAGENS*/
+input[id="c1"]:checked~#img-zip #images #img1 {
+    @apply block;
+}
+
+input[id="c2"]:checked~#img-zip #images #img2 {
+    @apply block;
+}
+
+input[id="c3"]:checked~#img-zip #images #img3 {
+    @apply block;
+}
+
+input[id="c4"]:checked~#img-zip #images #img4 {
+    @apply block;
+}
+
+input[id="c5"]:checked~#img-zip #images #img5 {
+    @apply block;
+}
+
+input[id="c6"]:checked~#img-zip #images #img6 {
+    @apply block;
+}
+
+input[id="c7"]:checked~#img-zip #images #img7 {
+    @apply block;
+}
+
+input[id="c8"]:checked~#img-zip #images #img8 {
+    @apply block;
+}
+
+
+
+/*------- USANDO OS INPUTS PARA MUDAR AS CORES DAS LABELS CLICADAS*/
+
+/*sintaxe: seleciona o input com id "c1" quando for marcado, estilizar a label dentro dos elementos "#labels-zip"*/
+input[id="c1"]:checked~#titles-zip #labels-zip label[for="c1"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c2"]:checked~#titles-zip #labels-zip label[for="c2"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c3"]:checked~#titles-zip #labels-zip label[for="c3"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c4"]:checked~#titles-zip #labels-zip label[for="c4"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c5"]:checked~#titles-zip #labels-zip label[for="c5"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c6"]:checked~#titles-zip #labels-zip label[for="c6"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c7"]:checked~#titles-zip #labels-zip label[for="c7"] {
+    @apply bg-tallesBlueLight;
+}
+
+input[id="c8"]:checked~#titles-zip #labels-zip label[for="c8"] {
+    @apply bg-tallesBlueLight;
+}
+
+/*_________________________________________________________FIM RESULTADOS ________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------- FEEDBACK -----------------------------------------------------------------*/
+
+#feedback {
+    @apply col-span-full flex flex-col items-center pb-5percenet overflow-hidden;
+
+    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Feedback/feedback-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#wrapped-feedback {
+    @apply container m-auto px-6 text-gray-600;
+
+    /*Breakpoint*/
+    @apply md:px-2 xl:px-6;
+
+    /*Marcação*/
+    /* @apply bg-purple-600 p-3; */
+}
+
+
+#wrapped-feedback #cards-wrapped {
+    @apply grid gap-8 grid-cols-2 grid-rows-2;
+
+    /*Breakpoint*/
+    @apply tablFD:grid-cols-1 tablFD:px-10;
+
+    /*Marcação*/
+    /* @apply bg-orange-500 p-7; */
+}
+
+/*ESTILIZAÇÃO GERAL DE TODOS OS CARDS INDIVIDUAIS*/
+#cards-wrapped .card-unique {
+    @apply flex items-center p-2 shadow-2xl border border-gray-800 rounded-xl;
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.95), rgba(32, 30, 30, 0.3));
+    @apply bg-[#262626];
+
+    /*Breakpoint*/
+    @apply mobFD:flex-col sm:space-x-8 sm:p-8;
+
+    /*Marcação*/
+    /* @apply bg-sky-400 p-2; */
+
+}
+
+.card-unique i {
+    @apply text-6xl animate-floatImage text-tallesBlueLight;
+}
+
+#cards-wrapped .card-unique .description {
+    @apply space-y-4 mt-4 text-center transition-all;
+
+    /*Brekpoint*/
+    @apply mobFD:text-ltt sm:mt-0 sm:text-left;
+
+    /*Marcação*/
+    /* @apply bg-rose-500; */
+}
+
+
+/*ESTILIZAÇÃO DAS ASPAS DE TODOS OS DEPOIMENTOS*/
+.card-unique div p {
+    @apply transition-all duration-500 text-tallesGrayLight;
+}
+
+.card-unique:hover div p {
+    @apply scale-105;
+}
+
+
+/*-------------- ESTILIZAÇÃO ESPECIFICA APENAS DO PRIMEIRO CARD*/
+#cards-wrapped>#first-card-wrapped {
+    @apply row-span-2 text-center;
+
+    /*Breakpoint*/
+    @apply sm:p-8;
+}
+
+#first-card-wrapped>div {
+    @apply h-full flex flex-col justify-center space-y-4 transition-all;
+
+    /*Breakpoint*/
+    @apply mobFD:text-ltt;
+
+    /*Marcação*/
+    /* @apply bg-green-500 p-2; */
+}
+
+
+#first-card-wrapped>div i {
+    @apply text-7xl;
+
+}
+
+#first-card-wrapped>div p {
+    @apply text-tallesGrayLight;
+
+    /*Breakpoint*/
+    @apply md:text-xl;
+}
+
+#first-card-wrapped>div p span {
+    @apply text-3xl mx-2 font-extrabold italic;
+
+}
+
+
+/*-------------- FIM ESTILIZAÇÃO ESPECIFICA APENAS DO PRIMEIRO CARD*/
+
+
+
+
+/*_________________________________________________________FIM FEEDBACK ________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------- FOOTER --------------------------------------------------------------------------*/
+footer {
+    @apply col-span-full bg-tallesBlackBlack;
+}
+
+
+footer #sub-footer-zip {
+    @apply container px-6 py-8 mx-auto;
+
+    /*Marcação*/
+    /* @apply bg-orange-500; */
+}
+
+#sub-footer-zip #top-footer-zip {
+    @apply flex flex-col items-center text-center;
+
+    /*Marcação*/
+    /* @apply bg-purple-600; */
+}
+
+#top-footer-zip a img {
+    @apply w-auto w-16;
+}
+
+#top-footer-zip>p {
+    @apply max-w-md mx-auto mt-4 text-gray-400 font-semibold;
+}
+
+#top-footer-zip #socials-icons-footer {
+    @apply flex flex-col mt-4 gap-7;
+
+    /*Breakpoint*/
+    @apply sm:flex-row sm:items-center sm:justify-center;
+
+    /*Marcação*/
+    /* @apply bg-green-600; */
+}
+
+#socials-icons-footer a {
+    @apply flex justify-center items-center text-sm font-medium bg-tallesBlueLight rounded-md p-2 border border-gray-600 shadow-2xl;
+
+}
+
+#socials-icons-footer a:hover {}
+
+#socials-icons-footer a i {
+    @apply text-4xl text-tallesBlack;
+
+}
+
+
+#socials-icons-footer a span {
+    @apply mx-1;
+}
+
+
+#sub-footer-zip hr {
+    @apply my-10 border-gray-700;
+}
+
+#sub-footer-zip #bottom-footer-zip {
+    @apply flex flex-col items-center;
+
+    /*Breakpoint*/
+    @apply sm:flex-row sm:justify-start;
+
+    /*Marcação*/
+    /* @apply bg-yellow-500; */
+}
+
+#bottom-footer-zip a {
+    @apply text-sm text-gray-500 cursor-pointer;
+}
+
+#bottom-footer-zip a span {
+    @apply inline-block text-sm text-tallesBlueLight underline font-medium animate-pulse;
+}
+
+/*____________________________________________ FIM DO FOOTER ___________________________________________________________________*/

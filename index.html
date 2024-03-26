@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="./dist/output.css" rel="stylesheet">
-    <title>Document</title>
+    <script src="src/script.js" defer></script>
+    <title>Talles Personal Trainer</title>
 </head>
 
 <body>
@@ -27,8 +28,8 @@
                 <a href="#hero">Home</a>
                 <a href="#about">Formação</a>
                 <a href="#plans">Planos</a>
-                <a href="#result">Resultados</a>
-                <a href="#testimony">Feedback</a>
+                <a href="#results">Resultados</a>
+                <a href="#feedback">Feedback</a>
             </nav>
 
         </header>
@@ -76,7 +77,7 @@
         <section id="about">
 
             <div class="title_global_wrapped">
-                <h1>Sobre mim</h1>
+                <h1 class="to-hide">Sobre mim</h1>
             </div>
 
             <div class="info-about-wrapped">
@@ -84,8 +85,8 @@
                 <div class="about-me-wrapped">
 
                     <div class="about-subtitles">
-                        <h2>Formação e objetivos</h2>
-                        <p>
+                        <h2 class="to-hide">Formação e objetivos</h2>
+                        <p class="to-hide">
                             Sou Graduado em Educação Física e Atleta.
                             Meu trabalho tem como foco o público que tem como principal objetivo mudanças de padrões
                             estético, Emagrecimento e Hipertrofia.
@@ -95,13 +96,13 @@
                     <div class="topics-about-wrapped">
 
                         <div class="subtitles-about">
-                            <h2>Serviços</h2>
-                            <h3>Consultoria Online e Presencial!</h3>
+                            <h2 class="to-hide">Serviços</h2>
+                            <h3 class="to-hide">Consultoria Online e Presencial!</h3>
                         </div>
 
                         <div class="topics-about">
 
-                            <div class="p-topics">
+                            <div class="p-topics to-hide">
                                 <i class='bx bxs-chevron-down-circle'></i>
                                 <p>
                                     Treinos personalizados, intensos e que se encaixam na sua rotina, seja em casa, na
@@ -112,7 +113,7 @@
                             </div>
 
 
-                            <div class="p-topics">
+                            <div class="p-topics to-hide">
                                 <i class='bx bxs-chevron-down-circle'></i>
                                 <p>
                                     Opções adaptáveis para todos os níveis e objetivos: seja emagrecimento, ganho de
@@ -125,7 +126,7 @@
                             </div>
 
 
-                            <div class="p-topics">
+                            <div class="p-topics to-hide">
                                 <i class='bx bxs-chevron-down-circle'></i>
                                 <p>
                                     Aulas personalizadas, gravadas para você assistir e treinar de onde quiser.
@@ -133,7 +134,7 @@
                             </div>
 
 
-                            <div class="p-topics">
+                            <div class="p-topics to-hide">
                                 <i class='bx bxs-chevron-down-circle'></i>
                                 <p>
                                     Treinos para iniciantes, intermediários e avançados atualizados mensalmente, suporte
@@ -154,120 +155,308 @@
 
         </section>
 
+
         <section id="plans">
 
             <div class="title_global_wrapped">
-                <h1>Planos</h1>
+                <h1 class="to-hide">Planos</h1>
             </div>
 
-            <div class="plans-container">
+            <div id="card-plans-wrapped">
 
-                <!-- CARD MENSAL OK-->
-                <div class="plans-uniq">
+                <!-- CARD 1 -->
+                <div class="to-hide card-plans-unique !duration-1000">
 
-                    <div class="price">
-                        <div class="title-price-wrapped">
-                            <span>R$</span>
-                            <h2>79.99</h2>
-                        </div>
-                        <p>No Pix</p>
+                    <div class="top-card-plans">
+                        <h2>Mensal</h2>
+                        <h3> R$79<sup>,99</sup></h3>
                     </div>
 
-                    <div class="bonus">
-                        <h3>Plano Mensal</h3>
+                    <div class="mid-card-plans">
 
-                        <div class="benefit-wrapped">
+                        <div class="star-icon-wrapped">
+                            <i class='bx bxs-star'></i>
+                        </div>
+
+                        <p>
+                            Ou por <strong>R$89.99</strong> no cartão de crédito
+                        </p>
+                    </div>
+
+                    <div class="bottom-card-plans">
+                        <a href="#">Pix</a>
+                        <a href="#">Crédito</a>
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="to-hide card-plans-unique !duration-1000">
+
+                    <div class="top-card-plans">
+                        <h2>Trimestral</h2>
+                        <h3> R$209<sup>,99</sup></h3>
+                    </div>
+
+                    <div class="mid-card-plans">
+
+                        <div class="star-icon-wrapped">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+
+                        <p>
+                            Ou por <strong>R$219.99</strong> no cartão de crédito
+                        </p>
+                    </div>
+
+                    <div class="bottom-card-plans">
+                        <a href="#">Pix</a>
+                        <a href="#">Crédito</a>
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="to-hide card-plans-unique !duration-1000">
+
+                    <div class="top-card-plans">
+                        <h2>Anual</h2>
+                        <h3> R$799<sup>,99</sup></h3>
+                    </div>
+
+                    <div class="mid-card-plans">
+
+                        <div class="star-icon-wrapped">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+
+                        <p>
+                            Ou por <strong>R$849.99</strong> no cartão de crédito
+                        </p>
+                    </div>
+
+                    <div class="bottom-card-plans">
+                        <a href="#">Pix</a>
+                        <a href="#">Crédito</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="results">
+
+            <div class="title_global_wrapped">
+                <h1 class="to-hide">Resultados</h1>
+            </div>
+
+            <div id="zip-results">
+
+                <input type="radio" name="slide" id="c1" checked>
+                <input type="radio" name="slide" id="c2">
+                <input type="radio" name="slide" id="c3">
+                <input type="radio" name="slide" id="c4">
+                <input type="radio" name="slide" id="c5">
+                <input type="radio" name="slide" id="c6">
+                <input type="radio" name="slide" id="c7">
+                <input type="radio" name="slide" id="c8">
+
+
+                <div id="titles-zip">
+
+                    <div id="labels-zip" class="to-hide">
+
+                        <label for="c1"></label>
+                        <label for="c2"></label>
+                        <label for="c3"></label>
+                        <label for="c4"></label>
+                        <label for="c5"></label>
+                        <label for="c6"></label>
+                        <label for="c7"></label>
+                        <label for="c8"></label>
+                    </div>
+
+                    <div id="sub-titles-zip">
+                        <h1 class="to-hide">Vem pro time!</h1>
+                        <p class="to-hide">
+                            Seguindo minha metodologia, somada a sua disciplina e constância, seremos capazes de obter
+                            resultados significativos em um tempo que nem você esperaria.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="img-zip">
+
+                    <div id="images" class="to-hide !duration-700">
+                        <img id="img1" src="Image/img_Resultado_Alunos/foto-1jpeg" alt="">
+                        <img id="img2" src="Image/img_Resultado_Alunos/barbara.jpeg" alt="">
+                        <img id="img3" src="Image/img_Resultado_Alunos/julio.png" alt="">
+                        <img id="img4" src="Image/img_Resultado_Alunos/felipe.png" alt="">
+                        <img id="img5" src="Image/img_Resultado_Alunos/dias.jpeg" alt="">
+                        <img id="img6" src="Image/img_Resultado_Alunos/pep.png" alt="">
+                        <img id="img7" src="Image/img_Resultado_Alunos/Rhuana.jpeg" alt="">
+                        <img id="img8" src="Image/img_Resultado_Alunos/iris.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="feedback">
+
+            <div class="title_global_wrapped">
+                <h1 class="to-hide">Feedback</h1>
+            </div>
+
+            <div id="wrapped-feedback">
+
+                <div id="cards-wrapped">
+
+                    <!-- CARD 1 -->
+                    <div id="first-card-wrapped" class="to-hide card-unique !delay-500">
+                        <div>
+                            <i class='bx bxs-user-pin'></i>
                             <p>
-                                <span>R$84.99</span> no cartão
+
+                                <q>
+                                    Mano, o treino desse mês ta insano! Fiz o treino de costas ontem e hoje o de peito,
+                                    só
+                                    nesses primeiros já deeu pra sentir a intensidade bem maior e as mudanças no meu
+                                    corpo
+                                    também, esse ta sendo o melhor desse ano! Simbora pra cima.
+                                </q>
+
                             </p>
                         </div>
-
                     </div>
 
-                    <div class="slide-plans">
 
-                        <div class="buttons-plans-wrapped">
+                    <!-- CARD 2 -->
+                    <div class="to-hide card-unique">
+                        <i class='bx bxs-user-pin'></i>
+                        <div class="description">
+                            <p class="text-gray-600">
 
-                            <a href="https://pay.infinitepay.io/tallesfurtado/85,00/" target="_blank">Crédito</a>
-                            <a href="https://pay.infinitepay.io/tallesfurtado/79,99/" target="_blank">Pix</a>
+                                <q>
+                                    Talles, quero te dizer que eu estou amando meus treinos, e estou dando meu melhor,
+                                    não
+                                    ta sendo fácil pra mim, mas com sua ajuda nos treinos eu sei que vou conseguir, e
+                                    olhe
+                                    que eu ja perdi <strong>3 quilos</strong> em 2 semanas. Obrigado por me ajudar, você
+                                    é o
+                                    melhor.
+                                </q>
 
+                            </p>
                         </div>
-
                     </div>
+
+
+
+                    <!-- CARD 3 -->
+                    <div class="to-hide card-unique">
+                        <i class='bx bxs-user-pin'></i>
+                        <div class="description">
+                            <p class="text-gray-600">
+
+                                <q>
+                                    Treinos bem intensos e pesados, adaptado de acordo com a necessidade e objetivo de
+                                    cada
+                                    aluno.
+                                    Sem falar no excelente profissional, super atencioso, incentivador e acima de tudo,
+                                    uma
+                                    grande inspiração pra nós alunos!
+                                </q>
+
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 4 -->
+                    <div class="to-hide card-unique">
+                        <i class='bx bxs-user-pin'></i>
+                        <div class="description">
+                            <p class="text-gray-600">
+
+                                <q>
+                                    Eii, quero lhe agradecer viu, por sempre estar me incentivando, mantendo firme nos
+                                    treinos dolorosos da vida, os melhores treinos, a melhor consultoria, sem igual.
+                                    Tamo
+                                    junto meu querido.
+                                </q>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 5 -->
+                    <div class="to-hide card-unique">
+                        <i class='bx bxs-user-pin'></i>
+                        <div class="description">
+                            <p class="text-gray-600">
+                                <q>
+                                    Acho que nunca suei tanto na minha vida durante o treino, sai com as pernas bambas e
+                                    bumbum redondinho, foi ótimo. Se continuar nesse ritmo, acho que o resultado vem
+                                    rápido
+                                    hahaha.
+                                </q>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- CARD TRIMESTRRAL -->
-                <div class="plans-uniq">
-
-                    <div class="price">
-                        <div class="title-price-wrapped">
-                            <span>R$</span>
-                            <h2>214.99</h2>
-                        </div>
-                        <p>Plano Trimestral</p>
-                    </div>
-
-                    <div class="bonus">
-                        <h3>Benefícios</h3>
-
-                        <div class="benefit-wrapped">
-                            <p><i class='bx bx-checkbox-checked'></i> free entranceee</p>
-                            <p><i class='bx bx-checkbox-checked'></i> free checkout</p>
-                            <p><i class='bx bx-checkbox-checked'></i> 1x speech listening</p>
-                        </div>
-
-                    </div>
-
-                    <div class="slide-plans">
-
-                        <div class="buttons-plans-wrapped">
-
-                            <a href="#" target="_blank">Crédito</a>
-                            <a href="https://pay.infinitepay.io/tallesfurtado/79,99/" target="_blank">Pix</a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- CARD ANUAL -->
-                <div class="plans-uniq">
-
-                    <div class="price">
-                        <div class="title-price-wrapped">
-                            <span>R$</span>
-                            <h2>799.99</h2>
-                        </div>
-                        <p>Plano Anual</p>
-                    </div>
-
-                    <div class="bonus">
-                        <h3>Benefícios</h3>
-
-                        <div class="benefit-wrapped">
-                            <p><i class='bx bx-checkbox-checked'></i> free entranceee</p>
-                            <p><i class='bx bx-checkbox-checked'></i> free checkout</p>
-                            <p><i class='bx bx-checkbox-checked'></i> 1x speech listening</p>
-                        </div>
-
-                    </div>
-
-                    <div class="slide-plans">
-
-                        <div class="buttons-plans-wrapped">
-
-                            <a href="#" target="_blank">Crédito</a>
-                            <a href="https://pay.infinitepay.io/tallesfurtado/79,99/" target="_blank">Pix</a>
-
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
         </section>
 
 
+        <footer>
+            <div id="sub-footer-zip">
+
+                <div id="top-footer-zip">
+
+                    <a href="#">
+                        <img src="Image/Logo/A4.png" alt="">
+                    </a>
+
+                    <p>
+                        Siga-me no instagram
+                    </p>
+
+                    <div id="socials-icons-footer">
+
+                        <a href="https://www.instagram.com/talles.furtado/" target="_blank">
+                            <i class='bx bxl-instagram-alt'></i>
+                            <span>Talles Furtado Personal</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/nutricionistajulialopes/" target="_blank">
+                            <i class='bx bxl-instagram-alt'></i>
+                            <span>Nutricionista Júlia Lopes</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr />
+
+                <!-- PAROU AQUIII -->
+                <div id="bottom-footer-zip">
+                    <a href="https://jairolopes.netlify.app/" target="_blank">
+                        © Desenvolvido por <span>Jairo Lopes</span>.
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
 
 </body>
