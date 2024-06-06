@@ -2600,7 +2600,12 @@ footer #sub-footer-zip{
 
 /*---------------------------------------------------- CARD ANIMADO -------------------------------------------*/
 
-#meus-resultados-wrapper {
+#meus-resultados-wrapper{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding-bottom: 6rem;
   background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2622,7 +2627,7 @@ footer #sub-footer-zip{
   line-height: 1;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(181 198 210 / var(--tw-text-opacity));
+  color: rgb(51 153 255 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -2639,8 +2644,16 @@ footer #sub-footer-zip{
 }
 
 #meuResultado p{
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(181 198 210 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background: linear-gradient(to right bottom, rgba(48, 48, 48, 0.65), rgba(32, 30, 30, 0.6));
 }
 
 /* ------------------ */
@@ -2707,6 +2720,16 @@ footer #sub-footer-zip{
   margin: auto;
   display: flex;
   gap: 1.25rem;
+  /* breakpoints */
+}
+
+@media (max-width: 639px){
+  #all-cards-zip{
+    flex-wrap: wrap;
+  }
+}
+
+#all-cards-zip {
   /* @apply bg-purple-500 p-3; */
 }
 
@@ -2805,5 +2828,15 @@ footer #sub-footer-zip{
     @apply absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48
 }
  */
+
+#backhome{
+  display: block;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(51 153 255 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
 
 /*_____________________________________________________FIM CARD ANIMADO _______________________________________*/

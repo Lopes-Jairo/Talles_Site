@@ -1017,6 +1017,8 @@ footer #sub-footer-zip {
 
 #meus-resultados-wrapper {
 
+    @apply flex flex-col gap-14 h-full pb-24;
+
     background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1033,7 +1035,7 @@ footer #sub-footer-zip {
 }
 
 #meuResultado h1 {
-    @apply text-5xl font-semibold text-tallesGrayLight transition-all duration-500;
+    @apply text-5xl font-semibold text-tallesBlueLight transition-all duration-500;
 }
 
 #meuResultado .paragrafos {
@@ -1044,13 +1046,17 @@ footer #sub-footer-zip {
 
 
 #meuResultado p {
-    @apply text-tallesGrayLight;
+    @apply flex gap-2 shadow-2xl p-5 rounded text-tallesGrayLight;
+    background: linear-gradient(to right bottom, rgba(48, 48, 48, 0.65), rgba(32, 30, 30, 0.6));
 }
 
 /* ------------------ */
 
 #all-cards-zip {
     @apply flex container m-auto gap-5;
+
+    /* breakpoints */
+    @apply mobFD:flex-wrap;
 
     /* @apply bg-purple-500 p-3; */
 }
@@ -1107,4 +1113,9 @@ footer #sub-footer-zip {
     @apply absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48
 }
  */
+
+#backhome {
+    @apply block text-tallesBlueLight underline font-semibold px-5percenet;
+}
+
 /*_____________________________________________________FIM CARD ANIMADO _______________________________________*/
