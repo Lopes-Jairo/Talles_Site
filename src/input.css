@@ -922,14 +922,15 @@ footer #sub-footer-zip {
     @apply flex flex-col mt-4 gap-7;
 
     /*Breakpoint*/
-    @apply sm:flex-row sm:items-center sm:justify-center;
+    @apply sm:flex-row mobBtn:flex-col sm:items-center sm:justify-center;
 
     /*Marcação*/
     /* @apply bg-green-600; */
 }
 
 #socials-icons-footer a {
-    @apply flex justify-center items-center text-sm font-medium bg-tallesBlueLight rounded-md p-2 border border-gray-600 shadow-2xl;
+    @apply flex justify-start items-center text-sm font-medium bg-tallesBlueLight rounded-md p-2 border border-gray-600 shadow-2xl text-nowrap;
+
 
 }
 

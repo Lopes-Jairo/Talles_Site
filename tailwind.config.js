@@ -122,6 +122,7 @@ module.exports = {
         'tablFD': { 'max': '1023px' },
         'mobFD': { 'max': '639px' },
         'deskIcone': { 'min': '1023px' },
+        'mobBtn': { 'max': '700px' }
       },
 
       spacing: {
