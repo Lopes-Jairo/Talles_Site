@@ -54,7 +54,7 @@ html {
 }
 
 #grid-container {
-    @apply grid grid-cols-12 font-poppins min-h-screen;
+    @apply grid grid-cols-12 font-poppins;
 }
 
 
@@ -545,7 +545,7 @@ nav a {
 
 /*---------------------------------------------------------- RESULTADOS -----------------------------------------------------------------*/
 #results {
-    @apply col-span-full flex flex-col justify-center items-center bg-tallesBlackBlack pb-5percenet;
+    @apply col-span-full flex flex-col justify-center items-center bg-tallesBlackBlack pb-5percenet gap-12;
 
 }
 
@@ -621,7 +621,7 @@ nav a {
 
 
     /*Marcação*/
-    /*  @apply bg-rose-700 p-2; */
+    /* @apply bg-rose-700 p-2; */
 }
 
 
@@ -639,6 +639,18 @@ nav a {
     @apply hidden object-cover w-full h-full max-w-2xl rounded-md;
 }
 
+
+/* ----CONTAINER PARA NOVA ABA RESULTADOS */
+#container-meus-resultados {
+
+
+    /* MARCAÇÃO */
+    /* @apply bg-yellow-500 p-3; */
+}
+
+#container-meus-resultados a {
+    @apply block p-3 font-semibold text-tallesBlackBlack bg-tallesBlueLight animate-pulse;
+}
 
 
 
@@ -957,3 +969,142 @@ footer #sub-footer-zip {
 }
 
 /*____________________________________________ FIM DO FOOTER ___________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------- CARD ANIMADO -------------------------------------------*/
+
+
+#meus-resultados-wrapper {
+
+    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#meus-resultados-wrapper #meuResultado {
+    @apply flex flex-col gap-10 text-center pt-10;
+
+
+    /*Marcação*/
+    /* @apply bg-orange-500 p-3 pt-10; */
+}
+
+#meuResultado h1 {
+    @apply text-5xl font-semibold text-tallesGrayLight transition-all duration-500;
+}
+
+#meuResultado .paragrafos {
+    @apply flex flex-col gap-5 text-left px-5percenet;
+
+    /* @apply bg-rose-500 p-3 px-5percenet; */
+}
+
+
+#meuResultado p {
+    @apply text-tallesGrayLight;
+}
+
+/* ------------------ */
+
+#all-cards-zip {
+    @apply flex container m-auto gap-5;
+
+    /* @apply bg-purple-500 p-3; */
+}
+
+.card-wrapped-unique {
+    @apply relative w-96 h-96 rounded-xl overflow-hidden border-4 m-auto mt-10;
+
+    /* @apply bg-purple-500 p-3; */
+
+}
+
+.card-wrapped-unique img {
+    @apply object-cover w-full h-full transform duration-700 backdrop-opacity-100;
+
+}
+
+.card-wrapped-unique #bottom-info {
+    @apply absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4;
+
+
+    /* @apply bg-yellow-500 p-3; */
+}
+
+
+.card-wrapped-unique:hover #bottom-info {
+    @apply -inset-y-0;
+}
+
+#bottom-info #title-wrapped {
+    @apply absolute w-full flex place-content-center;
+
+    /* @apply bg-green-500; */
+}
+
+#title-wrapped h2 {
+    @apply capitalize font-serif font-bold text-3xl text-center shadow-2xl text-white mt-10;
+
+    @apply bg-tallesBlueLight p-2 rounded;
+
+    /* @apply bg-rose-600; */
+}
+
+#bottom-info #subtitle-wrapped {
+    @apply absolute w-full flex place-content-center mt-32 font-semibold;
+
+    /* @apply bg-blue-500; */
+}
+
+#subtitle-wrapped p {
+    @apply font-sans text-center w-4/5 text-white mt-5;
+}
+
+/* #bottom-info button {
+    @apply absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48
+}
+ */
+/*_____________________________________________________FIM CARD ANIMADO _______________________________________*/
