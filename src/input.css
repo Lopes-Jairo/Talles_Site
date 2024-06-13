@@ -455,7 +455,7 @@ nav a {
     background: linear-gradient(to top, rgba(13, 13, 13, 0.95), rgba(32, 30, 30, 0.3));
 
     /*Breakpoint*/
-    @apply bg-[#262626] mobPlans:m-auto;
+    @apply bg-[#262626] mobPlans:m-auto mobPlans:min-w-[300px];
 
 
     /*Marcação*/

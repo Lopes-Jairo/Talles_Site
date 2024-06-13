@@ -1610,6 +1610,7 @@ nav a:hover{
 @media (max-width: 660px){
   #card-plans-wrapped .card-plans-unique{
     margin: auto;
+    min-width: 300px;
   }
 }
 
