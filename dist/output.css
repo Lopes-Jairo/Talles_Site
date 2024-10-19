@@ -550,104 +550,9 @@ video {
   display: none !important;
 }
 
-@keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-.animate-pulse{
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping{
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@keyframes floatImage{
-  0%, 100%{
-    transform: translateY(0);
-  }
-
-  50%{
-    transform: translateY(-1rem);
-  }
-}
-
-.animate-floatImage{
-  animation: floatImage 3s 0.2s ease-in-out infinite;
-}
-
-@keyframes bounce{
-  0%, 100%{
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50%{
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-bounce{
-  animation: bounce 1s infinite;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.font-bold{
-  font-weight: 700;
-}
-
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-rose-600{
-  --tw-text-opacity: 1;
-  color: rgb(225 29 72 / var(--tw-text-opacity));
-}
-
-.\!text-rose-600{
-  --tw-text-opacity: 1 !important;
-  color: rgb(225 29 72 / var(--tw-text-opacity)) !important;
-}
-
-.text-tallesBlueLight{
-  --tw-text-opacity: 1;
-  color: rgb(51 153 255 / var(--tw-text-opacity));
-}
-
-.\!text-yellow-400{
-  --tw-text-opacity: 1 !important;
-  color: rgb(250 204 21 / var(--tw-text-opacity)) !important;
-}
-
-.text-yellow-400{
-  --tw-text-opacity: 1;
-  color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
 .\!delay-500{
@@ -1581,33 +1486,6 @@ nav a:hover{
   background-attachment: fixed;
   background-size: cover;
 }
-
-/*----------- ALTERAÇÃO TEMPORARIA -------------*/
-
-#plans #container-titulos-plans{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-@keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-#container-titulos-plans h2{
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-  --tw-text-opacity: 1;
-  color: rgb(51 153 255 / var(--tw-text-opacity));
-}
-
-/* FIM DA ALTERAÇÃO TEMPORARIA */
 
 #plans #card-plans-wrapped{
   width: 100%;

@@ -435,19 +435,6 @@ nav a {
 
 }
 
-
-/*----------- ALTERAÇÃO TEMPORARIA -------------*/
-#plans #container-titulos-plans{
-    @apply flex flex-col gap-8 justify-center items-center;
-}
-
-#container-titulos-plans h2{
-    @apply text-4xl text-tallesBlueLight font-extrabold animate-pulse;
-}
-
-/* FIM DA ALTERAÇÃO TEMPORARIA */
-
-
 #plans #card-plans-wrapped {
     @apply grid grid-cols-3 gap-10 px-5 pt-10 container w-full;
 
