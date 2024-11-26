@@ -1,516 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="./dist/output.css" rel="stylesheet">
-    <link href="Assets/icomoon/style.css" rel="stylesheet">
+    <link href="Assets/icomoon/style.css" rel="stylesheet" />
+
+    <link
+      rel="shortcut icon"
+      href="Image/Logo/dumbell.ico"
+      type="image/x-icon"
+    />
     <script src="src/script.js" defer></script>
     <title>Talles Personal trainer</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="grid-container">
+      <header>
+        <img
+          id="logo-nome"
+          class="logo"
+          src="Image/Logo/A10.png"
+          alt="LogoMarca"
+        />
+        <img
+          id="logo-isolada"
+          class="logo"
+          src="Image/Logo/A4.png"
+          alt="LogoMarca"
+        />
 
-        <header>
-            <img id="logo-nome" class="logo" src="Image/Logo/A10.png" alt="LogoMarca">
-            <img id="logo-isolada" class="logo" src="Image/Logo/A4.png" alt="LogoMarca">
+        <input type="checkbox" id="check" class="!hidden" />
+        <label for="check">
+          <i class="bx bx-menu btn-menu"></i>
+          <i class="bx bx-x btn-x !hidden"></i>
+        </label>
 
-            <input type="checkbox" id="check" class="!hidden">
-            <label for="check">
-                <i class='bx bx-menu btn-menu'></i>
-                <i class='bx bx-x btn-x !hidden'></i>
-            </label>
+        <nav class="menu-items">
+          <a href="#hero">Home</a>
+          <a href="#about">Formação</a>
+          <a href="#plans">Planos</a>
+          <a href="#results">Resultados</a>
+          <a href="#feedback">Feedback</a>
+        </nav>
+      </header>
 
-            <nav class="menu-items">
-                <a href="#hero">Home</a>
-                <a href="#about">Formação</a>
-                <a href="#plans">Planos</a>
-                <a href="#results">Resultados</a>
-                <a href="#feedback">Feedback</a>
-            </nav>
+      <section id="hero">
+        <div id="info-profile-wrapped">
+          <div class="subtitles">
+            <h1>Talles Furtado <span id="dot-name">.</span></h1>
+            <h2>Personal <span id="profession">Trainer</span></h2>
 
-        </header>
+            <p>
+              <strong> Bacharel em Ed.Física </strong>, Atleta e Praticante de
+              musculação há mais de <strong>7 anos</strong>. Transformando a
+              vida das pessoas.
+            </p>
+          </div>
 
-        <section id="hero">
+          <div class="buttons-wrapped">
+            <a id="plans-button" href="#plans"> Planos </a>
 
-            <div id="info-profile-wrapped">
+            <a
+              id="whats"
+              href="https://api.whatsapp.com/send/?phone=558198955665&text&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <i class="bx bxl-whatsapp"></i> Entre em contato</a
+            >
+          </div>
+        </div>
 
-                <div class="subtitles">
+        <div id="photo-profile-wrapped">
+          <img
+            id="hexagono"
+            src="Image/Img_Hero/profile2.png"
+            alt="Photo-Profile"
+          />
+        </div>
 
-                    <h1>Talles Furtado <span id="dot-name">.</span> </h1>
-                    <h2>Personal <span id="profession">Trainer</span> </h2>
+        <span id="sign">
+          "O profissional de educação física transforma um corpo parado em um
+          corpo vivo, cheio de atitude e alegria!"
+        </span>
+      </section>
 
+      <section id="about">
+        <div class="title_global_wrapped">
+          <h1 class="to-hide">Sobre mim</h1>
+        </div>
 
-                    <p>
-                        <strong> Bacharel em Ed.Física </strong>, Atleta e Praticante de musculação há mais de
-                        <strong>7 anos</strong>.
+        <div class="info-about-wrapped">
+          <div class="about-me-wrapped">
+            <div class="about-subtitles">
+              <h2 class="to-hide">Formação e objetivos</h2>
+              <p class="to-hide">
+                Sou Graduado em Educação Física e Atleta. Meu trabalho tem como
+                foco o público que tem como principal objetivo mudanças de
+                padrões estético, Emagrecimento e Hipertrofia.
+              </p>
+            </div>
 
-                        Mais de <strong>150</strong> alunos ativos,
-                        transformando a vida das pessoas.
-                    </p>
+            <div class="topics-about-wrapped">
+              <div class="subtitles-about">
+                <h2 class="to-hide">Serviços</h2>
+                <h3 class="to-hide">Consultoria Online e Presencial!</h3>
+              </div>
 
+              <div class="topics-about">
+                <div class="p-topics to-hide">
+                  <i class="bx bxs-chevron-down-circle"></i>
+                  <p>
+                    Treinos personalizados, intensos e que se encaixam na sua
+                    rotina, seja em casa, na academia ou no lugar que você
+                    quiser.
+                  </p>
                 </div>
 
-                <div class="buttons-wrapped">
-        
-                    <a id="plans-button" href="#plans">
-                        Planos
-                    </a>
-
-                    <a id="whats"
-                        href="https://api.whatsapp.com/send/?phone=558198955665&text&type=phone_number&app_absent=0"
-                        target="_blank"> <i class='bx bxl-whatsapp'></i> Entre em contato</a>
+                <div class="p-topics to-hide">
+                  <i class="bx bxs-chevron-down-circle"></i>
+                  <p>
+                    Opções adaptáveis para todos os níveis e objetivos: seja
+                    emagrecimento, ganho de massa ou condicionamento físico,
+                    proporcionando uma jornada fitness completa, desafiando seus
+                    limites diariamente.
+                  </p>
                 </div>
 
-            </div>
-
-            <div id="photo-profile-wrapped">
-                <img id="hexagono" src="Image/Img_Hero/profile2.png" alt="Photo-Profile">
-            </div>
-
-            <span id="sign">
-                "O profissional de educação física transforma um corpo parado em um corpo vivo, cheio de atitude e
-                alegria!"
-            </span>
-
-        </section>
-
-        <section id="about">
-
-            <div class="title_global_wrapped">
-                <h1 class="to-hide">Sobre mim</h1>
-            </div>
-
-            <div class="info-about-wrapped">
-
-                <div class="about-me-wrapped">
-
-                    <div class="about-subtitles">
-                        <h2 class="to-hide">Formação e objetivos</h2>
-                        <p class="to-hide">
-                            Sou Graduado em Educação Física e Atleta.
-                            Meu trabalho tem como foco o público que tem como principal objetivo mudanças de padrões
-                            estético, Emagrecimento e Hipertrofia.
-                        </p>
-                    </div>
-
-                    <div class="topics-about-wrapped">
-
-                        <div class="subtitles-about">
-                            <h2 class="to-hide">Serviços</h2>
-                            <h3 class="to-hide">Consultoria Online e Presencial!</h3>
-                        </div>
-
-                        <div class="topics-about">
-
-                            <div class="p-topics to-hide">
-                                <i class='bx bxs-chevron-down-circle'></i>
-                                <p>
-                                    Treinos personalizados, intensos e que se encaixam na sua rotina, seja em casa, na
-                                    academia
-                                    ou
-                                    no lugar que você quiser.
-                                </p>
-                            </div>
-
-
-                            <div class="p-topics to-hide">
-                                <i class='bx bxs-chevron-down-circle'></i>
-                                <p>
-                                    Opções adaptáveis para todos os níveis e objetivos: seja emagrecimento, ganho de
-                                    massa
-                                    ou
-                                    condicionamento físico, proporcionando uma jornada fitness completa, desafiando seus
-                                    limites
-                                    diariamente.
-                                </p>
-                            </div>
-
-
-                            <div class="p-topics to-hide">
-                                <i class='bx bxs-chevron-down-circle'></i>
-                                <p>
-                                    Aulas personalizadas, gravadas para você assistir e treinar de onde quiser.
-                                </p>
-                            </div>
-
-
-                            <div class="p-topics to-hide">
-                                <i class='bx bxs-chevron-down-circle'></i>
-                                <p>
-                                    Treinos para iniciantes, intermediários e avançados atualizados mensalmente, suporte
-                                    diário
-                                    através do WhatsApp.
-                                </p>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
+                <div class="p-topics to-hide">
+                  <i class="bx bxs-chevron-down-circle"></i>
+                  <p>
+                    Aulas personalizadas, gravadas para você assistir e treinar
+                    de onde quiser.
+                  </p>
                 </div>
 
-                <img src="Image/Img_About/talles_about1.png" alt="Foto Talles Furtado">
+                <div class="p-topics to-hide">
+                  <i class="bx bxs-chevron-down-circle"></i>
+                  <p>
+                    Treinos para iniciantes, intermediários e avançados
+                    atualizados mensalmente, suporte diário através do WhatsApp.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="Image/Img_Hero/Talles_Trofeu.jpeg"
+            alt="Foto Talles Furtado"
+          />
+        </div>
+      </section>
+
+      <section id="plans">
+        <div id="container-titulos-plans" class="title_global_wrapped">
+          <h1 class="to-hide">Planos</h1>
+          <h2 class="to-hide mobRes:!text-3xl self-center">
+            Promoção <br class="hidden mobRes:block" />
+            Relâmpago
+          </h2>
+          <p
+            class="text-yellow-400 font-bold text-3xl mobRes:text-2xl animate-floatImage"
+          >
+            Até dia <strong class="animate-pulse">30/11</strong>
+          </p>
+          <p></p>
+        </div>
+
+        <div id="card-plans-wrapped">
+          <!-- CARD 1 -->
+          <div class="to-hide card-plans-unique !duration-1000">
+            <div class="top-card-plans">
+              <h2>Mensal</h2>
+              <br />
+              <h3>R$99<sup>,99</sup></h3>
             </div>
 
-        </section>
+            <div class="mid-card-plans">
+              <div class="star-icon-wrapped">
+                <i class="bx bxs-star"></i>
+              </div>
 
-        <section id="plans">
+              <p></p>
+            </div>
 
-            <div id="container-titulos-plans" class="title_global_wrapped">
-                <h1 class="to-hide">Planos</h1>
-                <h2>Promoção Relâmpago</h2>
-                <p class="text-yellow-400 font-bold text-3xl animate-floatImage">
-                    Até dia <strong class="animate-pulse">30/11</strong>
-                </p>
+            <div class="bottom-card-plans">
+              <a
+                href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20mensal"
+                target="_blank"
+                >Assinar</a
+              >
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="to-hide card-plans-unique !duration-1000">
+            <div class="top-card-plans">
+              <h2>Trimestral</h2>
+              <br />
+              <h3>R$270<sup>,00</sup></h3>
+            </div>
+
+            <div class="mid-card-plans">
+              <div class="star-icon-wrapped">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+
+              <p></p>
+            </div>
+
+            <div class="bottom-card-plans">
+              <a
+                href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20trimestral"
+                target="_blank"
+                >Assinar</a
+              >
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="to-hide card-plans-unique !duration-1000">
+            <div class="top-card-plans">
+              <h2>Semestral</h2>
+              <h4>
+                <s class="text-tallesBlueLight text-2xl font-bold"
+                  >de R$549,99</s
+                >
+              </h4>
+              <h3 class="animate-pulse !text-yellow-400 animate-bounce">
+                por R$399<sup>,99</sup>
+              </h3>
+            </div>
+
+            <div class="mid-card-plans">
+              <div class="star-icon-wrapped">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+
+              <p></p>
+            </div>
+
+            <div class="bottom-card-plans">
+              <a
+                href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20semestral"
+                target="_blank"
+                >Assinar</a
+              >
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="to-hide card-plans-unique !duration-1000">
+            <div class="top-card-plans">
+              <h2>Anual</h2>
+              <h4>
+                <s class="text-tallesBlueLight text-2xl font-bold"
+                  >de R$1049.99</s
+                >
+              </h4>
+              <h3 class="animate-pulse !text-yellow-400 animate-bounce">
+                por R$800<sup>,00</sup>
+              </h3>
+            </div>
+
+            <div class="mid-card-plans">
+              <div class="star-icon-wrapped">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+
+              <p></p>
+            </div>
+
+            <div class="bottom-card-plans">
+              <a
+                href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20anual"
+                target="_blank"
+                >Assinar</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results">
+        <div class="title_global_wrapped">
+          <h1 class="to-hide">Resultados</h1>
+        </div>
+
+        <div id="zip-results">
+          <input type="radio" name="slide" id="c1" checked />
+          <input type="radio" name="slide" id="c2" />
+          <input type="radio" name="slide" id="c3" />
+          <input type="radio" name="slide" id="c4" />
+          <input type="radio" name="slide" id="c5" />
+          <input type="radio" name="slide" id="c6" />
+          <input type="radio" name="slide" id="c7" />
+          <input type="radio" name="slide" id="c8" />
+
+          <div id="titles-zip">
+            <div id="labels-zip" class="to-hide">
+              <label for="c1"></label>
+              <label for="c2"></label>
+              <label for="c3"></label>
+              <label for="c4"></label>
+              <label for="c5"></label>
+              <label for="c6"></label>
+              <label for="c7"></label>
+              <label for="c8"></label>
+            </div>
+
+            <div id="sub-titles-zip">
+              <h1 class="to-hide">Vem pro time!</h1>
+              <p class="to-hide">
+                Seguindo minha metodologia, somada a sua disciplina e
+                constância, seremos capazes de obter resultados significativos
+                em um tempo que nem você esperaria.
+              </p>
+            </div>
+          </div>
+
+          <div id="img-zip">
+            <div id="images" class="to-hide !duration-700">
+              <img
+                id="img1"
+                src="Image/img_Resultado_Alunos/novo_aluno.jpeg"
+                alt=""
+              />
+              <img
+                id="img2"
+                src="Image/img_Resultado_Alunos/barbara.jpeg"
+                alt=""
+              />
+              <img
+                id="img3"
+                src="Image/img_Resultado_Alunos/julio.png"
+                alt=""
+              />
+              <img
+                id="img4"
+                src="Image/img_Resultado_Alunos/felipe.png"
+                alt=""
+              />
+              <img
+                id="img5"
+                src="Image/img_Resultado_Alunos/dias.jpeg"
+                alt=""
+              />
+              <img id="img6" src="Image/img_Resultado_Alunos/pep.png" alt="" />
+              <img
+                id="img7"
+                src="Image/img_Resultado_Alunos/Rhuana.jpeg"
+                alt=""
+              />
+              <img id="img8" src="Image/img_Resultado_Alunos/iris.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div id="container-meus-resultados" class="to-hide">
+          <a href="results.html" target="_blank">Minha evolução</a>
+          <a class="!hidden" href="conquistas.html" target="_blank"
+            >Conquistas</a
+          >
+        </div>
+      </section>
+
+      <section id="feedback">
+        <div class="title_global_wrapped">
+          <h1 class="to-hide">Feedback</h1>
+        </div>
+
+        <div id="wrapped-feedback">
+          <div id="cards-wrapped">
+            <!-- CARD 1 -->
+            <div id="first-card-wrapped" class="to-hide card-unique !delay-500">
+              <div>
+                <i class="bx bxs-user-pin"></i>
                 <p>
-
+                  <q>
+                    Mano, o treino desse mês ta insano! Fiz o treino de costas
+                    ontem e hoje o de peito, só nesses primeiros já deeu pra
+                    sentir a intensidade bem maior e as mudanças no meu corpo
+                    também, esse ta sendo o melhor desse ano! Simbora pra cima.
+                  </q>
                 </p>
+              </div>
             </div>
 
-            <div id="card-plans-wrapped">
-
-                <!-- CARD 1 -->
-                <div class="to-hide card-plans-unique !duration-1000">
-
-                    <div class="top-card-plans">
-                        <h2>Mensal</h2>
-                        <br>
-                        <h3> R$99<sup>,99</sup></h3>
-                    </div>
-
-                    <div class="mid-card-plans">
-
-                        <div class="star-icon-wrapped">
-                            <i class='bx bxs-star'></i>
-                        </div>
-
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="bottom-card-plans">
-                        <a href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20mensal"
-                            target="_blank">Assinar</a>
-                    </div>
-
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="to-hide card-plans-unique !duration-1000">
-
-                    <div class="top-card-plans">
-                        <h2>Trimestral</h2>
-                        <br>
-                        <h3>R$270<sup>,00</sup></h3>
-                    </div>
-
-                    <div class="mid-card-plans">
-
-                        <div class="star-icon-wrapped">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="bottom-card-plans">
-                        <a href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20trimestral"
-                            target="_blank">Assinar</a>
-                    </div>
-
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="to-hide card-plans-unique !duration-1000">
-
-                    <div class="top-card-plans">
-                        <h2>Semestral</h2>
-                        <h4> <s class="text-tallesBlueLight text-2xl font-bold">de R$549,99</s> </h4>
-                        <h3 class="animate-pulse !text-yellow-400 animate-bounce"> por R$399<sup>,99</sup></h3>
-                    </div>
-
-                    <div class="mid-card-plans">
-
-                        <div class="star-icon-wrapped">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="bottom-card-plans">
-                        <a href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20semestral"
-                            target="_blank">Assinar</a>
-                    </div>
-
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="to-hide card-plans-unique !duration-1000">
-
-                    <div class="top-card-plans">
-                        <h2>Anual</h2>
-                        <h4> <s class="text-tallesBlueLight text-2xl font-bold">de R$1049.99</s> </h4>
-                        <h3 class="animate-pulse !text-yellow-400 animate-bounce"> por R$800<sup>,00</sup></h3>
-                    </div>
-
-                    <div class="mid-card-plans">
-
-                        <div class="star-icon-wrapped">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="bottom-card-plans">
-                        <a href="https://wa.me/558198955665/?text=Tenho%20interesse%20em%20assinar%20o%20plano%20anual"
-                            target="_blank">Assinar</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section id="results">
-
-            <div class="title_global_wrapped">
-                <h1 class="to-hide">Resultados</h1>
+            <!-- CARD 2 -->
+            <div class="to-hide card-unique">
+              <i class="bx bxs-user-pin"></i>
+              <div class="description">
+                <p class="text-gray-600">
+                  <q>
+                    Talles, quero te dizer que eu estou amando meus treinos, e
+                    estou dando meu melhor, não ta sendo fácil pra mim, mas com
+                    sua ajuda nos treinos eu sei que vou conseguir, e olhe que
+                    eu ja perdi <strong>3 quilos</strong> em 2 semanas. Obrigado
+                    por me ajudar, você é o melhor.
+                  </q>
+                </p>
+              </div>
             </div>
 
-            <div id="zip-results">
-
-                <input type="radio" name="slide" id="c1" checked>
-                <input type="radio" name="slide" id="c2">
-                <input type="radio" name="slide" id="c3">
-                <input type="radio" name="slide" id="c4">
-                <input type="radio" name="slide" id="c5">
-                <input type="radio" name="slide" id="c6">
-                <input type="radio" name="slide" id="c7">
-                <input type="radio" name="slide" id="c8">
-
-
-                <div id="titles-zip">
-
-                    <div id="labels-zip" class="to-hide">
-
-                        <label for="c1"></label>
-                        <label for="c2"></label>
-                        <label for="c3"></label>
-                        <label for="c4"></label>
-                        <label for="c5"></label>
-                        <label for="c6"></label>
-                        <label for="c7"></label>
-                        <label for="c8"></label>
-                    </div>
-
-                    <div id="sub-titles-zip">
-                        <h1 class="to-hide">Vem pro time!</h1>
-                        <p class="to-hide">
-                            Seguindo minha metodologia, somada a sua disciplina e constância, seremos capazes de obter
-                            resultados significativos em um tempo que nem você esperaria.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div id="img-zip">
-
-                    <div id="images" class="to-hide !duration-700">
-                        <img id="img1" src="Image/img_Resultado_Alunos/novo_aluno.jpeg" alt="">
-                        <img id="img2" src="Image/img_Resultado_Alunos/barbara.jpeg" alt="">
-                        <img id="img3" src="Image/img_Resultado_Alunos/julio.png" alt="">
-                        <img id="img4" src="Image/img_Resultado_Alunos/felipe.png" alt="">
-                        <img id="img5" src="Image/img_Resultado_Alunos/dias.jpeg" alt="">
-                        <img id="img6" src="Image/img_Resultado_Alunos/pep.png" alt="">
-                        <img id="img7" src="Image/img_Resultado_Alunos/Rhuana.jpeg" alt="">
-                        <img id="img8" src="Image/img_Resultado_Alunos/iris.png" alt="">
-                    </div>
-
-                </div>
-
+            <!-- CARD 3 -->
+            <div class="to-hide card-unique">
+              <i class="bx bxs-user-pin"></i>
+              <div class="description">
+                <p class="text-gray-600">
+                  <q>
+                    Treinos bem intensos e pesados, adaptado de acordo com a
+                    necessidade e objetivo de cada aluno. Sem falar no excelente
+                    profissional, super atencioso, incentivador e acima de tudo,
+                    uma grande inspiração pra nós alunos!
+                  </q>
+                </p>
+              </div>
             </div>
 
-            <div id="container-meus-resultados" class="to-hide">
-                <a href="results.html" target="_blank">Ver minha evolução.</a>
-            </div>
-        </section>
-
-        <section id="feedback">
-
-            <div class="title_global_wrapped">
-                <h1 class="to-hide">Feedback</h1>
-            </div>
-
-            <div id="wrapped-feedback">
-
-                <div id="cards-wrapped">
-
-                    <!-- CARD 1 -->
-                    <div id="first-card-wrapped" class="to-hide card-unique !delay-500">
-                        <div>
-                            <i class='bx bxs-user-pin'></i>
-                            <p>
-
-                                <q>
-                                    Mano, o treino desse mês ta insano! Fiz o treino de costas ontem e hoje o de peito,
-                                    só
-                                    nesses primeiros já deeu pra sentir a intensidade bem maior e as mudanças no meu
-                                    corpo
-                                    também, esse ta sendo o melhor desse ano! Simbora pra cima.
-                                </q>
-
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD 2 -->
-                    <div class="to-hide card-unique">
-                        <i class='bx bxs-user-pin'></i>
-                        <div class="description">
-                            <p class="text-gray-600">
-
-                                <q>
-                                    Talles, quero te dizer que eu estou amando meus treinos, e estou dando meu melhor,
-                                    não
-                                    ta sendo fácil pra mim, mas com sua ajuda nos treinos eu sei que vou conseguir, e
-                                    olhe
-                                    que eu ja perdi <strong>3 quilos</strong> em 2 semanas. Obrigado por me ajudar, você
-                                    é o
-                                    melhor.
-                                </q>
-
-                            </p>
-                        </div>
-                    </div>
-
-
-
-                    <!-- CARD 3 -->
-                    <div class="to-hide card-unique">
-                        <i class='bx bxs-user-pin'></i>
-                        <div class="description">
-                            <p class="text-gray-600">
-
-                                <q>
-                                    Treinos bem intensos e pesados, adaptado de acordo com a necessidade e objetivo de
-                                    cada
-                                    aluno.
-                                    Sem falar no excelente profissional, super atencioso, incentivador e acima de tudo,
-                                    uma
-                                    grande inspiração pra nós alunos!
-                                </q>
-
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD 4 -->
-                    <div class="to-hide card-unique">
-                        <i class='bx bxs-user-pin'></i>
-                        <div class="description">
-                            <p class="text-gray-600">
-
-                                <q>
-                                    Eii, quero lhe agradecer viu, por sempre estar me incentivando, mantendo firme nos
-                                    treinos dolorosos da vida, os melhores treinos, a melhor consultoria, sem igual.
-                                    Tamo
-                                    junto meu querido.
-                                </q>
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD 5 -->
-                    <div class="to-hide card-unique">
-                        <i class='bx bxs-user-pin'></i>
-                        <div class="description">
-                            <p class="text-gray-600">
-                                <q>
-                                    Acho que nunca suei tanto na minha vida durante o treino, sai com as pernas bambas e
-                                    bumbum redondinho, foi ótimo. Se continuar nesse ritmo, acho que o resultado vem
-                                    rápido
-                                    hahaha.
-                                </q>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
+            <!-- CARD 4 -->
+            <div class="to-hide card-unique">
+              <i class="bx bxs-user-pin"></i>
+              <div class="description">
+                <p class="text-gray-600">
+                  <q>
+                    Eii, quero lhe agradecer viu, por sempre estar me
+                    incentivando, mantendo firme nos treinos dolorosos da vida,
+                    os melhores treinos, a melhor consultoria, sem igual. Tamo
+                    junto meu querido.
+                  </q>
+                </p>
+              </div>
             </div>
 
-        </section>
-
-
-        <footer>
-            <div id="sub-footer-zip">
-
-                <div id="top-footer-zip">
-
-                    <a href="#">
-                        <img src="Image/Logo/A4.png" alt="">
-                    </a>
-
-                    <p>
-                        Siga-me no instagram
-                    </p>
-
-                    <div id="socials-icons-footer">
-
-                        <a href="https://www.instagram.com/talles.furtado/" target="_blank">
-                            <i class='bx bxl-instagram-alt'></i>
-                            <span>Talles Furtado Personal</span>
-                        </a>
-
-                        <a href="https://www.instagram.com/nutricionistajulialopes/" target="_blank">
-                            <i class='bx bxl-instagram-alt'></i>
-                            <span>Nutricionista Júlia Lopes</span>
-                        </a>
-
-                        <a href="https://www.instagram.com/aboknutrition/" target="_blank">
-                            <i class='bx bxl-instagram-alt'></i>
-                            <span>Abok Nutrition</span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <hr />
-
-                <!-- PAROU AQUIII -->
-                <div id="bottom-footer-zip">
-                    <a href="https://jairolopes.netlify.app/" target="_blank">
-                        © Desenvolvido por <span>Jairo Lopes</span>.
-                    </a>
-                </div>
+            <!-- CARD 5 -->
+            <div class="to-hide card-unique">
+              <i class="bx bxs-user-pin"></i>
+              <div class="description">
+                <p class="text-gray-600">
+                  <q>
+                    Acho que nunca suei tanto na minha vida durante o treino,
+                    sai com as pernas bambas e bumbum redondinho, foi ótimo. Se
+                    continuar nesse ritmo, acho que o resultado vem rápido
+                    hahaha.
+                  </q>
+                </p>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div id="sub-footer-zip">
+          <div id="top-footer-zip">
+            <a href="#">
+              <img src="Image/Logo/A4.png" alt="" />
+            </a>
+
+            <p>Siga-me no instagram</p>
+
+            <div id="socials-icons-footer">
+              <a
+                href="https://www.instagram.com/talles.furtado/"
+                target="_blank"
+              >
+                <i class="bx bxl-instagram-alt"></i>
+                <span>Talles Furtado Personal</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/nutricionistajulialopes/"
+                target="_blank"
+              >
+                <i class="bx bxl-instagram-alt"></i>
+                <span>Nutricionista Júlia Lopes</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/aboknutrition/"
+                target="_blank"
+              >
+                <i class="bx bxl-instagram-alt"></i>
+                <span>Abok Nutrition</span>
+              </a>
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- PAROU AQUIII -->
+          <div id="bottom-footer-zip">
+            <a href="https://jairolopes.netlify.app/" target="_blank">
+              © Desenvolvido por <span>Jairo Lopes</span>.
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-</body>
-
+  </body>
 </html>

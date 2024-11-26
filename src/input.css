@@ -1,1126 +1,911 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@100;400;500;600;700;800;900&family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@100;400;500;600;700;800;900&family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .h2-session {
-    @apply text-2xl font-semibold;
+  @apply text-2xl font-semibold;
 }
 
-
 .text-shadow {
-    text-shadow: 2px 2px 6px rgb(213, 211, 211);
+  text-shadow: 2px 2px 6px rgb(213, 211, 211);
 }
 
 .text-shadow-white {
-    text-shadow: 2px 2px 6px rgb(60, 59, 59);
+  text-shadow: 2px 2px 6px rgb(60, 59, 59);
 }
 
 .to-hide {
-    @apply opacity-0 -translate-x-3/4 ease-in;
-    transition: all 1.2s;
+  @apply opacity-0 -translate-x-3/4 ease-in;
+  transition: all 1.2s;
 }
 
 .to-show {
-    @apply opacity-100 translate-x-0 ease-out;
-    transition: all 1.2s;
+  @apply opacity-100 translate-x-0 ease-out;
+  transition: all 1.2s;
 }
-
-
 
 /*----------CONFIGURANDO TITULO DA SESSÃO PARA TODAS AS SESSÕES*/
 .title_global_wrapped {
-    @apply flex justify-center pt-5percenet pb-28 pt-36;
+  @apply flex justify-center pt-5percenet pb-28 pt-36;
 }
 
 .title_global_wrapped h1 {
-    @apply text-5xl font-semibold text-tallesGrayLight transition-all duration-500;
+  @apply text-5xl font-semibold text-tallesGrayLight transition-all duration-500;
 
-    /*breakpoint*/
-    @apply mobile:text-4xl;
+  /*breakpoint*/
+  @apply mobile:text-4xl;
 }
-
 
 /*-------------------------*/
 
-
-
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #grid-container {
-    @apply grid grid-cols-12 font-poppins;
+  @apply grid grid-cols-12 font-poppins;
 }
-
-
 
 /*------------------------------------- HEADER -------------------------------------------------------*/
 
 #grid-container header {
-    @apply col-span-full flex justify-between sticky items-center top-0 left-0 right-0 px-10 py-3;
-    @apply bg-tallesBlackBlack text-tallesGrayLight transition-all z-50;
+  @apply col-span-full flex justify-between sticky items-center top-0 left-0 right-0 px-10 py-3;
+  @apply bg-tallesBlackBlack text-tallesGrayLight transition-all z-50;
 
-    /*Breakpoint*/
-
+  /*Breakpoint*/
 }
 
 header .logo {
-    @apply w-56;
+  @apply w-56;
 
-    /*breakpoints*/
-    @apply tbl:w-14;
+  /*breakpoints*/
+  @apply tbl:w-14;
 }
 
 #logo-nome {
-    @apply block;
+  @apply block;
 
-    /*breakpoint*/
-    @apply tbl:hidden;
+  /*breakpoint*/
+  @apply tbl:hidden;
 }
 
 #logo-isolada {
-    @apply hidden;
+  @apply hidden;
 
-    /*breakpoint*/
-    @apply tbl:block;
+  /*breakpoint*/
+  @apply tbl:block;
 }
 
 .nav_logo span {
-    @apply inline-block animate-bounce ml-1 text-4xl text-tallesGrayLight;
+  @apply inline-block animate-bounce ml-1 text-4xl text-tallesGrayLight;
 }
 
 .nav_logo a {
-    @apply font-semibold;
+  @apply font-semibold;
 }
 
 header label {
-    @apply absolute right-3 text-2xl hidden;
+  @apply absolute right-3 text-2xl hidden;
 
-    /*breakpoints*/
-    @apply tbl:block;
+  /*breakpoints*/
+  @apply tbl:block;
 }
 
 label i {
-    @apply text-tallesGrayLight;
+  @apply text-tallesGrayLight;
 }
 
 /*OCULTA BOTAO MENU QUANDO CHECK MARCADO*/
-input:checked~label .btn-menu {
-    @apply !hidden;
+input:checked ~ label .btn-menu {
+  @apply !hidden;
 }
 
 /* MOSTRA BOTAO X QUANDO CHECK MARCADO*/
-input:checked~label .btn-x {
-    @apply !block;
+input:checked ~ label .btn-x {
+  @apply !block;
 }
 
-
 header nav {
-    @apply flex gap-10 relative transition-all bg-tallesBlackBlack font-semibold;
+  @apply flex gap-10 relative transition-all bg-tallesBlackBlack font-semibold;
 
-    /*breakpoints*/
-    /*Quando menor que 860px, a nav irá virará um menu lateral*/
-    @apply tbl:fixed tbl:top-2 tbl:left-0 tbl:h-full tbl:flex-col tbl:pl-7 tbl:pt-10 tbl:w-56 tbl:-translate-x-60 tbl:border-r-2 tbl:border-gray-700;
+  /*breakpoints*/
+  /*Quando menor que 860px, a nav irá virará um menu lateral*/
+  @apply tbl:fixed tbl:top-2 tbl:left-0 tbl:h-full tbl:flex-col tbl:pl-7 tbl:pt-10 tbl:w-56 tbl:-translate-x-60 tbl:border-r-2 tbl:border-gray-700;
 }
 
 /*Mostra a nav que está oculta com o translate de volta para 0*/
-input:checked~nav {
-    @apply tbl:translate-x-0;
+input:checked ~ nav {
+  @apply tbl:translate-x-0;
 }
 
 nav a {
-    @apply text-tallesGrayLight hover:text-tallesBlueLight transition-all;
+  @apply text-tallesGrayLight hover:text-tallesBlueLight transition-all;
 }
 
-
 /*__________________________________________________ FIM DO HEADER __________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*-------------------------------------------------------- HERO ------------------------------------------------*/
 
 #hero {
-    @apply col-span-full flex items-center justify-between bg-tallesBlack text-tallesGrayLight px-14 min-h-screen overflow-hidden relative;
+  @apply col-span-full flex items-center justify-between bg-tallesBlack text-tallesGrayLight px-14 min-h-screen overflow-hidden relative;
 
-    /*Breakpoint*/
-    @apply lghero:justify-around;
+  /*Breakpoint*/
+  @apply lghero:justify-around;
 
-    @apply tbhero:flex-col tbhero:pt-20 tbhero:justify-center tbhero:items-center;
+  @apply tbhero:flex-col tbhero:pt-20 tbhero:justify-center tbhero:items-center;
 
-    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
+    url("../Image/Img_Hero/YYYY.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*-------LADO ESQUERDO, SUBTITULOS E BOTÕES*/
 #hero #info-profile-wrapped {
-    @apply -translate-y-10;
+  @apply -translate-y-10;
 
-    /*breakpoint*/
-    @apply tbhero:flex tbhero:flex-col tbhero:items-center;
+  /*breakpoint*/
+  @apply tbhero:flex tbhero:flex-col tbhero:items-center;
 }
 
 #info-profile-wrapped .subtitles {
-    @apply flex flex-col gap-2;
+  @apply flex flex-col gap-2;
 
-    /*breakpoint*/
-    @apply tbhero:items-center;
+  /*breakpoint*/
+  @apply tbhero:items-center;
 }
 
-
 .subtitles h1 {
-    @apply text-7xl font-bold animate-slideRight transition-all text-nowrap;
+  @apply text-7xl font-bold animate-slideRight transition-all text-nowrap;
 
-    /*Breakpoint*/
-    @apply deskhero:text-5xl mobhero:text-4xl smhero:text-3xl;
+  /*Breakpoint*/
+  @apply deskhero:text-5xl mobhero:text-4xl smhero:text-3xl;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
 .subtitles h1 #dot-name {
-    @apply text-8xl inline-block animate-bounce text-tallesBlueLight;
+  @apply text-8xl inline-block animate-bounce text-tallesBlueLight;
 
-    /*breakpoint*/
-    @apply deskhero:text-6xl mobhero:text-5xl;
+  /*breakpoint*/
+  @apply deskhero:text-6xl mobhero:text-5xl;
 }
-
 
 .subtitles h2 {
-    @apply text-5xl text-tallesBlueLight font-semibold animate-slideLeft transition-all;
+  @apply text-5xl text-tallesBlueLight font-semibold animate-slideLeft transition-all;
 
-    /*breakpoint*/
-    @apply deskhero:text-3xl mobhero:text-2xl smhero:text-xl;
+  /*breakpoint*/
+  @apply deskhero:text-3xl mobhero:text-2xl smhero:text-xl;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
-
-.subtitles h2 #profession {}
-
+.subtitles h2 #profession {
+}
 
 .subtitles p {
-    @apply animate-slideRight transition-all w-8/12 transition-all;
+  @apply animate-slideRight transition-all w-8/12 transition-all;
 
-    /*breakpoint*/
-    @apply deskhero:w-2/3 tbhero:text-sm mobhero:text-ltt mobhero:w-10/12;
+  /*breakpoint*/
+  @apply deskhero:w-2/3 tbhero:text-sm mobhero:text-ltt mobhero:w-10/12;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
 /* CONTAINER DOS BOTÕES*/
 .buttons-wrapped {
-    @apply flex gap-3 mt-6;
+  @apply flex gap-3 mt-6;
 }
 
 .buttons-wrapped a {
-    @apply flex justify-center items-center;
+  @apply flex justify-center items-center;
 }
 
 .buttons-wrapped #plans-button {
-    @apply bg-tallesBlueLight py-3 px-5 rounded text-tallesBlack font-semibold border-2 border-transparent transition-all;
-    @apply hover:bg-tallesBlack hover:text-tallesBlueLight hover:border-tallesBlueLight;
+  @apply bg-tallesBlueLight py-3 px-5 rounded text-tallesBlack font-semibold border-2 border-transparent transition-all;
+  @apply hover:bg-tallesBlack hover:text-tallesBlueLight hover:border-tallesBlueLight;
 
-    @apply animate-slideRight mobhero:text-sm mobhero:px-4 mobhero:py-2;
+  @apply animate-slideRight mobhero:text-sm mobhero:px-4 mobhero:py-2;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
 .buttons-wrapped #whats {
-    @apply border-2 p-2 border-tallesBlueLight rounded text-tallesBlueLight font-semibold transition-all text-nowrap;
-    @apply hover:bg-tallesBlueLight hover:text-tallesBlack animate-slideLeft;
+  @apply border-2 p-2 border-tallesBlueLight rounded text-tallesBlueLight font-semibold transition-all text-nowrap;
+  @apply hover:bg-tallesBlueLight hover:text-tallesBlack animate-slideLeft;
 
-    /*Breakpoint*/
-    @apply mobhero:text-sm mobhero:px-2 mobhero:py-2;
+  /*Breakpoint*/
+  @apply mobhero:text-sm mobhero:px-2 mobhero:py-2;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
 #whats i {
-    @apply text-4xl;
+  @apply text-4xl;
 }
 
 /*------LADO DIREITO, FOTO DO PROFILE HERO*/
 #hero #photo-profile-wrapped {
-    @apply w-400 animate-slideLeft;
+  @apply w-400 animate-slideLeft;
 
-    /*breakpoint*/
-    @apply tbhero:w-64;
+  /*breakpoint*/
+  @apply tbhero:w-64;
 
-    /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
-    @apply opacity-0;
+  /*DEIXANDO OPACIDADE ZERADA PARA A ANIMAÇÃO  SAIR FLUIDA*/
+  @apply opacity-0;
 }
 
 #hero #photo-profile-wrapped img {
-    @apply w-full rounded-full border-b-8 border-tallesBlack;
+  @apply w-full rounded-full border-b-8 border-tallesBlack;
 }
-
 
 /*LETREIRO*/
 #hero #sign {
-    @apply absolute top-1 -right-80 text-tallesBlackLight2 font-semibold text-sm animate-cloudLeft;
+  @apply absolute top-1 -right-80 text-tallesBlackLight2 font-semibold text-sm animate-cloudLeft;
 
-    /*Breakpoint*/
-    @apply mobhero:text-ltt;
+  /*Breakpoint*/
+  @apply mobhero:text-ltt;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*----------------------------------------------------------- ABOUT ------------------------------------------------------------*/
 
 #about {
-    @apply col-span-full text-tallesGrayLight bg-tallesBlackBlack pb-5percenet;
-
-
+  @apply col-span-full text-tallesGrayLight bg-tallesBlackBlack pb-5percenet;
 }
-
 
 /*Container que engloba todo o conteudo de about*/
 .info-about-wrapped {
-    @apply flex gap-24 px-5percenet justify-center;
+  @apply flex gap-24 px-5percenet justify-center;
 
-    /*marcação*/
-    /* @apply bg-purple-800; */
+  /*marcação*/
+  /* @apply bg-purple-800; */
 }
-
 
 /*---------------CONTAINER QUE ENGLOBA TODA PARTE DE FORMAÇÃO*/
 .info-about-wrapped .about-me-wrapped {
-    @apply flex flex-col gap-10;
+  @apply flex flex-col gap-10;
 
-    /*Breakpoint*/
-    @apply tblabout:w-10/12 mobabout:w-full lgabout:w-2/3;
+  /*Breakpoint*/
+  @apply tblabout:w-10/12 mobabout:w-full lgabout:w-2/3;
 
-    /*Marcação*/
-    /*  @apply bg-yellow-400 p-3; */
+  /*Marcação*/
+  /*  @apply bg-yellow-400 p-3; */
 }
 
 .about-me-wrapped .about-subtitles {
-    @apply flex flex-col gap-2;
+  @apply flex flex-col gap-2;
 
+  @apply tblabout:items-center tblabout:gap-5;
 
-    @apply tblabout:items-center tblabout:gap-5;
-
-    /*Marcação*/
-    /* @apply bg-rose-600 p-3; */
+  /*Marcação*/
+  /* @apply bg-rose-600 p-3; */
 }
 
 .about-subtitles h2 {
-    @apply h2-session text-tallesBlueLight;
+  @apply h2-session text-tallesBlueLight;
 }
 
 .about-subtitles p {
+  @apply transition-all;
 
-    @apply transition-all;
-
-    /*  @apply bg-purple-500; */
+  /*  @apply bg-purple-500; */
 }
-
 
 /*---------------CONTAINER QUE ENGLOBA TODA PARTE TÓPICOS*/
 .about-me-wrapped .topics-about-wrapped {
-    @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4;
 
-    /* @apply bg-blue-800 p-3; */
+  /* @apply bg-blue-800 p-3; */
 }
-
 
 .topics-about-wrapped .subtitles-about {
+  /*Breakpoint*/
+  @apply tblabout:flex tblabout:flex-col tblabout:items-center tblabout:mt-16;
 
-    /*Breakpoint*/
-    @apply tblabout:flex tblabout:flex-col tblabout:items-center tblabout:mt-16;
-
-    /*Marcação*/
-    /* @apply bg-green-500 p-3; */
+  /*Marcação*/
+  /* @apply bg-green-500 p-3; */
 }
-
 
 .subtitles-about h2 {
-    @apply h2-session text-tallesBlueLight;
-
-
+  @apply h2-session text-tallesBlueLight;
 }
 
-
-.subtitles-about h3 {}
-
+.subtitles-about h3 {
+}
 
 /*------------- CONTAINER ENGLOBA APENAS OS TÓPPICOS*/
 .topics-about-wrapped .topics-about {
-    @apply flex flex-col gap-3;
+  @apply flex flex-col gap-3;
 
-
-    /* @apply bg-purple-800 p-3; */
+  /* @apply bg-purple-800 p-3; */
 }
 
 .topics-about .p-topics {
-    @apply flex gap-2 shadow-2xl p-5 rounded;
-    background: linear-gradient(to right bottom, rgba(48, 48, 48, 0.65), rgba(32, 30, 30, 0.6));
-
+  @apply flex gap-2 shadow-2xl p-5 rounded;
+  background: linear-gradient(
+    to right bottom,
+    rgba(48, 48, 48, 0.65),
+    rgba(32, 30, 30, 0.6)
+  );
 }
-
 
 .p-topics i {
-    @apply text-tallesBlueLight
+  @apply text-tallesBlueLight;
 }
 
-
 .p-topics p {
-    @apply mobhero:text-xs tbhero:text-sm transition-all;
+  @apply mobhero:text-xs tbhero:text-sm transition-all;
 }
 
 .info-about-wrapped img {
-    @apply w-96 tblabout:hidden;
+  @apply w-96 tblabout:hidden;
 }
 
-
 /*____________________________________________________________ FIM ABOUT __________________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------------------------------------------- PLANS -----------------------------------------------------------------*/
 
 #plans {
-    @apply col-span-full pb-5percenet flex flex-col items-center;
+  @apply col-span-full pb-5percenet flex flex-col items-center;
 
-    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_About/gym.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
+  background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
+    url("../Image/Img_About/gym.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
 
 /*----------- ALTERAÇÃO TEMPORARIA -------------*/
-#plans #container-titulos-plans{
-    @apply flex flex-col gap-8 justify-center items-center;
+#plans #container-titulos-plans {
+  @apply flex flex-col gap-8 justify-center items-center;
 }
 
-#container-titulos-plans h2{
-    @apply text-4xl text-tallesBlueLight font-extrabold animate-pulse;
+#container-titulos-plans h2 {
+  @apply text-4xl text-tallesBlueLight font-extrabold animate-pulse;
 }
 
 /* FIM DA ALTERAÇÃO TEMPORARIA */
 
-
 #plans #card-plans-wrapped {
-    @apply grid grid-cols-3 gap-10 px-5 pt-10 container w-full;
+  @apply grid grid-cols-3 gap-10 px-5 pt-10 container w-full;
 
-    /*Breakpoint*/
-    @apply tabplans:grid-cols-2 mobPlans:grid-cols-1;
+  /*Breakpoint*/
+  @apply tabplans:grid-cols-2 mobPlans:grid-cols-1;
 
-
-    /*Marcação*/
-    /* @apply bg-blue-900; */
+  /*Marcação*/
+  /* @apply bg-blue-900; */
 }
-
 
 /*Card unico inteiro*/
 #card-plans-wrapped .card-plans-unique {
-    @apply rounded-lg text-center overflow-hidden hover:shadow-2xl transition-all duration-200 px-7 pt-4;
+  @apply rounded-lg text-center overflow-hidden hover:shadow-2xl transition-all duration-200 px-7 pt-4;
 
-    @apply max-w-md shadow-2xl border-r-2 border-tallesBlueLight;
-    background: linear-gradient(to top, rgba(13, 13, 13, 0.95), rgba(32, 30, 30, 0.3));
+  @apply max-w-md shadow-2xl border-r-2 border-tallesBlueLight;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.95),
+    rgba(32, 30, 30, 0.3)
+  );
 
-    /*Breakpoint*/
-    @apply bg-[#262626] mobPlans:m-auto mobPlans:min-w-[300px];
+  /*Breakpoint*/
+  @apply bg-[#262626] mobPlans:m-auto mobPlans:min-w-[300px];
 
-
-    /*Marcação*/
-    /* @apply bg-rose-500; */
+  /*Marcação*/
+  /* @apply bg-rose-500; */
 }
 
 /*-----PARTE SUPERIOR DO CARD*/
 .card-plans-unique .top-card-plans {
-    @apply w-full py-5 border-b border-gray-700;
+  @apply w-full py-5 border-b border-gray-700;
 
-    /*Marcação*/
-    /* @apply bg-green-600; */
+  /*Marcação*/
+  /* @apply bg-green-600; */
 }
 
 .top-card-plans h2 {
-    @apply font-bold text-3xl text-tallesGrayLight;
+  @apply font-bold text-3xl text-tallesGrayLight;
 }
 
 .top-card-plans h3 {
-    @apply font-extrabold text-tallesBlueLight text-3xl mt-2;
+  @apply font-extrabold text-tallesBlueLight text-3xl mt-2;
 }
 
 /*_____ FIM PARTE SUPERIOR CARD*/
 
-
-
-
-
 /*-----PARTE MEDIA DO CARD*/
 .card-plans-unique .mid-card-plans {
-    @apply my-5 flex flex-col gap-5;
+  @apply my-5 flex flex-col gap-5;
 
-    /*Marcação*/
-    /* @apply bg-yellow-600 p-2; */
+  /*Marcação*/
+  /* @apply bg-yellow-600 p-2; */
 }
 
-.mid-card-plans .star-icon-wrapped {}
-
+.mid-card-plans .star-icon-wrapped {
+}
 
 .star-icon-wrapped i {
-    @apply text-yellow-400 text-4xl;
+  @apply text-yellow-400 text-4xl;
 }
 
-
 .mid-card-plans p {
-    @apply text-tallesGrayLight text-sm pt-2;
+  @apply text-tallesGrayLight text-sm pt-2;
 }
 
 /*_____ FIM PARTE MEDIA CARD*/
 
-
-
-
 /*-----PARTE INFERIOR DO CARD*/
 
 .card-plans-unique .bottom-card-plans {
-    @apply flex gap-2 leading-8 mb-10 text-lg font-light px-4;
+  @apply flex gap-2 leading-8 mb-10 text-lg font-light px-4;
 
-    /*Marcação*/
-    /* @apply bg-sky-600; */
+  /*Marcação*/
+  /* @apply bg-sky-600; */
 }
 
 .bottom-card-plans a {
-    @apply w-full block bg-tallesBlackBlack font-medium text-xl text-tallesBlueLight py-3 rounded-xl transition duration-700 ease-in-out;
+  @apply w-full block bg-tallesBlackBlack font-medium text-xl text-tallesBlueLight py-3 rounded-xl transition duration-700 ease-in-out;
 
-    /*Hover*/
-    @apply hover:bg-tallesBlueLight hover:text-tallesBlackBlack hover:shadow-2xl;
+  /*Hover*/
+  @apply hover:bg-tallesBlueLight hover:text-tallesBlackBlack hover:shadow-2xl;
 }
 
 /*_____ FIM PARTE INFERIOR CARD*/
 
 /*_________________________________________________________FIM PLANS ________________________________________________________________*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------------------------------- RESULTADOS -----------------------------------------------------------------*/
 #results {
-    @apply col-span-full flex flex-col justify-center items-center bg-tallesBlackBlack pb-5percenet gap-12;
-
+  @apply col-span-full flex flex-col justify-center items-center bg-tallesBlackBlack pb-5percenet gap-12;
 }
 
 #results #zip-results {
-    @apply container flex justify-center items-center gap-16 px-8;
+  @apply container flex justify-center items-center gap-16 px-8;
 
-    /*Breakpoint*/
-    @apply tablRes:flex-col tablRes:gap-5;
+  /*Breakpoint*/
+  @apply tablRes:flex-col tablRes:gap-5;
 
-    /*Marcação*/
-    /* @apply bg-purple-500; */
+  /*Marcação*/
+  /* @apply bg-purple-500; */
 }
 
 #zip-results input {
-    @apply hidden;
+  @apply hidden;
 }
-
 
 /*CONTAINER ONDE FICA APENAS OS TITULOS, PARAGRAFOS*/
 #zip-results #titles-zip {
-    @apply flex flex-col items-center gap-4 w-full max-w-xl;
+  @apply flex flex-col items-center gap-4 w-full max-w-xl;
 
-    /*Breakpoint*/
-    @apply tablRes:gap-8;
+  /*Breakpoint*/
+  @apply tablRes:gap-8;
 
-    /*Marcação*/
-    /* @apply bg-green-600 p-3; */
+  /*Marcação*/
+  /* @apply bg-green-600 p-3; */
 }
 
 #titles-zip #labels-zip {
-    @apply flex gap-2 order-2;
+  @apply flex gap-2 order-2;
 
-    /*Marcação*/
-    /* @apply bg-gray-700; */
+  /*Marcação*/
+  /* @apply bg-gray-700; */
 }
 
-
 #labels-zip label {
-    @apply block w-5 h-5 bg-tallesGrayLight cursor-pointer rounded-full;
-
+  @apply block w-5 h-5 bg-tallesGrayLight cursor-pointer rounded-full;
 }
 
 #titles-zip #sub-titles-zip {
-    @apply flex flex-col gap-5 transition-all duration-500;
+  @apply flex flex-col gap-5 transition-all duration-500;
 
-    /*Breakpoint*/
-    @apply mobRes:text-sm;
+  /*Breakpoint*/
+  @apply mobRes:text-sm;
 
-    /*Marcação*/
-    /* @apply bg-blue-700; */
+  /*Marcação*/
+  /* @apply bg-blue-700; */
 }
 
 #sub-titles-zip h1 {
-    @apply text-3xl text-center font-medium tracking-wide text-tallesBlueLight;
+  @apply text-3xl text-center font-medium tracking-wide text-tallesBlueLight;
 
-    /*Breakpoint*/
-    @apply md:text-4xl;
+  /*Breakpoint*/
+  @apply md:text-4xl;
 }
 
 #sub-titles-zip p {
-    @apply mt-4 text-tallesGrayLight;
+  @apply mt-4 text-tallesGrayLight;
 }
-
-
-
-
 
 /*CONTAINER ONDE FICA AS IMAGENS*/
 #img-zip {
-    @apply flex flex-col items-center justify-center;
+  @apply flex flex-col items-center justify-center;
 
-    /*breakpoint*/
+  /*breakpoint*/
 
-
-    /*Marcação*/
-    /* @apply bg-rose-700 p-2; */
+  /*Marcação*/
+  /* @apply bg-rose-700 p-2; */
 }
 
-
 #img-zip #images {
-    @apply flex w-[500px] h-[400px] overflow-hidden transition-all duration-500;
+  @apply flex w-[500px] h-[400px] overflow-hidden transition-all duration-500;
 
-    /*Breakpoint*/
-    @apply tablRes:w-[400px] tablRes:h-[350px] mobRes:w-[350px] mobRes:h-[300px];
+  /*Breakpoint*/
+  @apply tablRes:w-[400px] tablRes:h-[350px] mobRes:w-[350px] mobRes:h-[300px];
 
-    /*Marcação*/
-    /* @apply bg-blue-600 p-2; */
+  /*Marcação*/
+  /* @apply bg-blue-600 p-2; */
 }
 
 #img-zip #images img {
-    @apply hidden object-cover w-full h-full max-w-2xl rounded-md;
+  @apply hidden object-cover w-full h-full max-w-2xl rounded-md;
 }
-
 
 /* ----CONTAINER PARA NOVA ABA RESULTADOS */
 #container-meus-resultados {
+  @apply flex gap-2;
 
-
-    /* MARCAÇÃO */
-    /* @apply bg-yellow-500 p-3; */
+  /* MARCAÇÃO */
+  /* @apply bg-yellow-500 p-3; */
 }
 
 #container-meus-resultados a {
-    @apply block p-3 font-semibold text-tallesBlackBlack bg-tallesBlueLight animate-pulse;
+  @apply block p-3 font-semibold text-tallesBlackBlack bg-tallesBlueLight animate-pulse;
+  @apply rounded;
 }
-
-
-
 
 /*------- USANDO OS INPUTS PARA MOSTRAR AS IMAGENS*/
-input[id="c1"]:checked~#img-zip #images #img1 {
-    @apply block;
+input[id="c1"]:checked ~ #img-zip #images #img1 {
+  @apply block;
 }
 
-input[id="c2"]:checked~#img-zip #images #img2 {
-    @apply block;
+input[id="c2"]:checked ~ #img-zip #images #img2 {
+  @apply block;
 }
 
-input[id="c3"]:checked~#img-zip #images #img3 {
-    @apply block;
+input[id="c3"]:checked ~ #img-zip #images #img3 {
+  @apply block;
 }
 
-input[id="c4"]:checked~#img-zip #images #img4 {
-    @apply block;
+input[id="c4"]:checked ~ #img-zip #images #img4 {
+  @apply block;
 }
 
-input[id="c5"]:checked~#img-zip #images #img5 {
-    @apply block;
+input[id="c5"]:checked ~ #img-zip #images #img5 {
+  @apply block;
 }
 
-input[id="c6"]:checked~#img-zip #images #img6 {
-    @apply block;
+input[id="c6"]:checked ~ #img-zip #images #img6 {
+  @apply block;
 }
 
-input[id="c7"]:checked~#img-zip #images #img7 {
-    @apply block;
+input[id="c7"]:checked ~ #img-zip #images #img7 {
+  @apply block;
 }
 
-input[id="c8"]:checked~#img-zip #images #img8 {
-    @apply block;
+input[id="c8"]:checked ~ #img-zip #images #img8 {
+  @apply block;
 }
-
-
 
 /*------- USANDO OS INPUTS PARA MUDAR AS CORES DAS LABELS CLICADAS*/
 
 /*sintaxe: seleciona o input com id "c1" quando for marcado, estilizar a label dentro dos elementos "#labels-zip"*/
-input[id="c1"]:checked~#titles-zip #labels-zip label[for="c1"] {
-    @apply bg-tallesBlueLight;
+input[id="c1"]:checked ~ #titles-zip #labels-zip label[for="c1"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c2"]:checked~#titles-zip #labels-zip label[for="c2"] {
-    @apply bg-tallesBlueLight;
+input[id="c2"]:checked ~ #titles-zip #labels-zip label[for="c2"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c3"]:checked~#titles-zip #labels-zip label[for="c3"] {
-    @apply bg-tallesBlueLight;
+input[id="c3"]:checked ~ #titles-zip #labels-zip label[for="c3"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c4"]:checked~#titles-zip #labels-zip label[for="c4"] {
-    @apply bg-tallesBlueLight;
+input[id="c4"]:checked ~ #titles-zip #labels-zip label[for="c4"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c5"]:checked~#titles-zip #labels-zip label[for="c5"] {
-    @apply bg-tallesBlueLight;
+input[id="c5"]:checked ~ #titles-zip #labels-zip label[for="c5"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c6"]:checked~#titles-zip #labels-zip label[for="c6"] {
-    @apply bg-tallesBlueLight;
+input[id="c6"]:checked ~ #titles-zip #labels-zip label[for="c6"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c7"]:checked~#titles-zip #labels-zip label[for="c7"] {
-    @apply bg-tallesBlueLight;
+input[id="c7"]:checked ~ #titles-zip #labels-zip label[for="c7"] {
+  @apply bg-tallesBlueLight;
 }
 
-input[id="c8"]:checked~#titles-zip #labels-zip label[for="c8"] {
-    @apply bg-tallesBlueLight;
+input[id="c8"]:checked ~ #titles-zip #labels-zip label[for="c8"] {
+  @apply bg-tallesBlueLight;
 }
 
 /*_________________________________________________________FIM RESULTADOS ________________________________________________________________*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------------------------------- FEEDBACK -----------------------------------------------------------------*/
 
 #feedback {
-    @apply col-span-full flex flex-col items-center pb-5percenet overflow-hidden;
+  @apply col-span-full flex flex-col items-center pb-5percenet overflow-hidden;
 
-    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Feedback/feedback-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
+    url("../Image/Img_Feedback/feedback-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
 
 #wrapped-feedback {
-    @apply container m-auto px-6 text-gray-600;
+  @apply container m-auto px-6 text-gray-600;
 
-    /*Breakpoint*/
-    @apply md:px-2 xl:px-6;
+  /*Breakpoint*/
+  @apply md:px-2 xl:px-6;
 
-    /*Marcação*/
-    /* @apply bg-purple-600 p-3; */
+  /*Marcação*/
+  /* @apply bg-purple-600 p-3; */
 }
 
-
 #wrapped-feedback #cards-wrapped {
-    @apply grid gap-8 grid-cols-2 grid-rows-2;
+  @apply grid gap-8 grid-cols-2 grid-rows-2;
 
-    /*Breakpoint*/
-    @apply tablFD:grid-cols-1 tablFD:px-10;
+  /*Breakpoint*/
+  @apply tablFD:grid-cols-1 tablFD:px-10;
 
-    /*Marcação*/
-    /* @apply bg-orange-500 p-7; */
+  /*Marcação*/
+  /* @apply bg-orange-500 p-7; */
 }
 
 /*ESTILIZAÇÃO GERAL DE TODOS OS CARDS INDIVIDUAIS*/
 #cards-wrapped .card-unique {
-    @apply flex items-center p-2 shadow-2xl border border-gray-800 rounded-xl;
-    background: linear-gradient(to top, rgba(13, 13, 13, 0.95), rgba(32, 30, 30, 0.3));
-    @apply bg-[#262626];
+  @apply flex items-center p-2 shadow-2xl border border-gray-800 rounded-xl;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.95),
+    rgba(32, 30, 30, 0.3)
+  );
+  @apply bg-[#262626];
 
-    /*Breakpoint*/
-    @apply mobFD:flex-col sm:space-x-8 sm:p-8;
+  /*Breakpoint*/
+  @apply mobFD:flex-col sm:space-x-8 sm:p-8;
 
-    /*Marcação*/
-    /* @apply bg-sky-400 p-2; */
-
+  /*Marcação*/
+  /* @apply bg-sky-400 p-2; */
 }
 
 .card-unique i {
-    @apply text-6xl animate-floatImage text-tallesBlueLight;
+  @apply text-6xl animate-floatImage text-tallesBlueLight;
 }
 
 #cards-wrapped .card-unique .description {
-    @apply space-y-4 mt-4 text-center transition-all;
+  @apply space-y-4 mt-4 text-center transition-all;
 
-    /*Brekpoint*/
-    @apply mobFD:text-ltt sm:mt-0 sm:text-left;
+  /*Brekpoint*/
+  @apply mobFD:text-ltt sm:mt-0 sm:text-left;
 
-    /*Marcação*/
-    /* @apply bg-rose-500; */
+  /*Marcação*/
+  /* @apply bg-rose-500; */
 }
-
 
 /*ESTILIZAÇÃO DAS ASPAS DE TODOS OS DEPOIMENTOS*/
 .card-unique div p {
-    @apply transition-all duration-500 text-tallesGrayLight;
+  @apply transition-all duration-500 text-tallesGrayLight;
 }
 
 .card-unique:hover div p {
-    @apply scale-105;
+  @apply scale-105;
 }
-
 
 /*-------------- ESTILIZAÇÃO ESPECIFICA APENAS DO PRIMEIRO CARD*/
-#cards-wrapped>#first-card-wrapped {
-    @apply row-span-2 text-center;
+#cards-wrapped > #first-card-wrapped {
+  @apply row-span-2 text-center;
 
-    /*Breakpoint*/
-    @apply sm:p-8;
+  /*Breakpoint*/
+  @apply sm:p-8;
 }
 
-#first-card-wrapped>div {
-    @apply h-full flex flex-col justify-center space-y-4 transition-all;
+#first-card-wrapped > div {
+  @apply h-full flex flex-col justify-center space-y-4 transition-all;
 
-    /*Breakpoint*/
-    @apply mobFD:text-ltt;
+  /*Breakpoint*/
+  @apply mobFD:text-ltt;
 
-    /*Marcação*/
-    /* @apply bg-green-500 p-2; */
+  /*Marcação*/
+  /* @apply bg-green-500 p-2; */
 }
 
-
-#first-card-wrapped>div i {
-    @apply text-7xl;
-
+#first-card-wrapped > div i {
+  @apply text-7xl;
 }
 
-#first-card-wrapped>div p {
-    @apply text-tallesGrayLight;
+#first-card-wrapped > div p {
+  @apply text-tallesGrayLight;
 
-    /*Breakpoint*/
-    @apply md:text-xl;
+  /*Breakpoint*/
+  @apply md:text-xl;
 }
 
-#first-card-wrapped>div p span {
-    @apply text-3xl mx-2 font-extrabold italic;
-
+#first-card-wrapped > div p span {
+  @apply text-3xl mx-2 font-extrabold italic;
 }
-
 
 /*-------------- FIM ESTILIZAÇÃO ESPECIFICA APENAS DO PRIMEIRO CARD*/
 
-
-
-
 /*_________________________________________________________FIM FEEDBACK ________________________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*--------------------------------------------- FOOTER --------------------------------------------------------------------------*/
 footer {
-    @apply col-span-full bg-tallesBlackBlack;
+  @apply col-span-full bg-tallesBlackBlack;
 }
 
-
 footer #sub-footer-zip {
-    @apply container px-6 py-8 mx-auto;
+  @apply container px-6 py-8 mx-auto;
 
-    /*Marcação*/
-    /* @apply bg-orange-500; */
+  /*Marcação*/
+  /* @apply bg-orange-500; */
 }
 
 #sub-footer-zip #top-footer-zip {
-    @apply flex flex-col items-center text-center;
+  @apply flex flex-col items-center text-center;
 
-    /*Marcação*/
-    /* @apply bg-purple-600; */
+  /*Marcação*/
+  /* @apply bg-purple-600; */
 }
 
 #top-footer-zip a img {
-    @apply w-auto w-16;
+  @apply w-auto w-16;
 }
 
-#top-footer-zip>p {
-    @apply max-w-md mx-auto mt-4 text-gray-400 font-semibold;
+#top-footer-zip > p {
+  @apply max-w-md mx-auto mt-4 text-gray-400 font-semibold;
 }
 
 #top-footer-zip #socials-icons-footer {
-    @apply flex flex-col mt-4 gap-7;
+  @apply flex flex-col mt-4 gap-7;
 
-    /*Breakpoint*/
-    @apply sm:flex-row mobBtn:flex-col sm:items-center sm:justify-center;
+  /*Breakpoint*/
+  @apply sm:flex-row mobBtn:flex-col sm:items-center sm:justify-center;
 
-    /*Marcação*/
-    /* @apply bg-green-600; */
+  /*Marcação*/
+  /* @apply bg-green-600; */
 }
 
 #socials-icons-footer a {
-    @apply flex justify-start items-center text-sm font-medium bg-tallesBlueLight rounded-md p-2 border border-gray-600 shadow-2xl text-nowrap;
-
-
+  @apply flex justify-start items-center text-sm font-medium bg-tallesBlueLight rounded-md p-2 border border-gray-600 shadow-2xl text-nowrap;
 }
 
-#socials-icons-footer a:hover {}
+#socials-icons-footer a:hover {
+}
 
 #socials-icons-footer a i {
-    @apply text-4xl text-tallesBlack;
-
+  @apply text-4xl text-tallesBlack;
 }
-
 
 #socials-icons-footer a span {
-    @apply mx-1;
+  @apply mx-1;
 }
 
-
 #sub-footer-zip hr {
-    @apply my-10 border-gray-700;
+  @apply my-10 border-gray-700;
 }
 
 #sub-footer-zip #bottom-footer-zip {
-    @apply flex flex-col items-center;
+  @apply flex flex-col items-center;
 
-    /*Breakpoint*/
-    @apply sm:flex-row sm:justify-start;
+  /*Breakpoint*/
+  @apply sm:flex-row sm:justify-start;
 
-    /*Marcação*/
-    /* @apply bg-yellow-500; */
+  /*Marcação*/
+  /* @apply bg-yellow-500; */
 }
 
 #bottom-footer-zip a {
-    @apply text-sm text-gray-500 cursor-pointer;
+  @apply text-sm text-gray-500 cursor-pointer;
 }
 
 #bottom-footer-zip a span {
-    @apply inline-block text-sm text-tallesBlueLight underline font-medium animate-pulse;
+  @apply inline-block text-sm text-tallesBlueLight underline font-medium animate-pulse;
 }
 
 /*____________________________________________ FIM DO FOOTER ___________________________________________________________________*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------------------------- CARD ANIMADO -------------------------------------------*/
 
-
 #meus-resultados-wrapper {
+  @apply flex flex-col gap-14 h-full pb-24;
 
-    @apply flex flex-col gap-14 h-full pb-24;
-
-    background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e), url('../Image/Img_Hero/YYYY.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
+    url("../Image/Img_Hero/YYYY.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-
 #meus-resultados-wrapper #meuResultado {
-    @apply flex flex-col gap-10 text-center pt-10;
+  @apply flex flex-col gap-10 text-center pt-10;
 
-
-    /*Marcação*/
-    /* @apply bg-orange-500 p-3 pt-10; */
+  /*Marcação*/
+  /* @apply bg-orange-500 p-3 pt-10; */
 }
 
 #meuResultado h1 {
-    @apply text-5xl font-semibold text-tallesBlueLight transition-all duration-500;
+  @apply text-5xl font-semibold text-tallesBlueLight transition-all duration-500;
 }
 
 #meuResultado .paragrafos {
-    @apply flex flex-col gap-5 text-left px-5percenet;
+  @apply flex flex-col gap-5 text-left px-5percenet;
 
-    /* @apply bg-rose-500 p-3 px-5percenet; */
+  /* @apply bg-rose-500 p-3 px-5percenet; */
 }
 
-
 #meuResultado p {
-    @apply flex gap-2 shadow-2xl p-5 rounded text-tallesGrayLight;
-    background: linear-gradient(to right bottom, rgba(48, 48, 48, 0.65), rgba(32, 30, 30, 0.6));
+  @apply flex gap-2 shadow-2xl p-5 rounded text-tallesGrayLight;
+  background: linear-gradient(
+    to right bottom,
+    rgba(48, 48, 48, 0.65),
+    rgba(32, 30, 30, 0.6)
+  );
 }
 
 /* ------------------ */
 
 #all-cards-zip {
-    @apply flex container m-auto gap-5;
+  @apply flex container m-auto gap-5;
 
-    /* breakpoints */
-    @apply mobFD:flex-wrap;
+  /* breakpoints */
+  @apply mobFD:flex-wrap;
 
-    /* @apply bg-purple-500 p-3; */
+  /* @apply bg-purple-500 p-3; */
 }
 
 .card-wrapped-unique {
-    @apply relative w-96 h-96 rounded-xl overflow-hidden border-4 m-auto mt-10;
+  @apply relative w-96 h-96 rounded-xl overflow-hidden border-4 m-auto mt-10;
 
-    /* @apply bg-purple-500 p-3; */
-
+  /* @apply bg-purple-500 p-3; */
 }
 
 .card-wrapped-unique img {
-    @apply object-cover w-full h-full transform duration-700 backdrop-opacity-100;
-
+  @apply object-cover w-full h-full transform duration-700 backdrop-opacity-100;
 }
 
 .card-wrapped-unique #bottom-info {
-    @apply absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4;
+  @apply absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4;
 
-
-    /* @apply bg-yellow-500 p-3; */
+  /* @apply bg-yellow-500 p-3; */
 }
 
-
 .card-wrapped-unique:hover #bottom-info {
-    @apply -inset-y-0;
+  @apply -inset-y-0;
 }
 
 #bottom-info #title-wrapped {
-    @apply absolute w-full flex place-content-center;
+  @apply absolute w-full flex place-content-center;
 
-    /* @apply bg-green-500; */
+  /* @apply bg-green-500; */
 }
 
 #title-wrapped h2 {
-    @apply capitalize font-serif font-bold text-3xl text-center shadow-2xl text-white mt-10;
+  @apply capitalize font-serif font-bold text-3xl text-center shadow-2xl text-white mt-10;
 
-    @apply bg-tallesBlueLight p-2 rounded;
+  @apply bg-tallesBlueLight p-2 rounded;
 
-    /* @apply bg-rose-600; */
+  /* @apply bg-rose-600; */
 }
 
 #bottom-info #subtitle-wrapped {
-    @apply absolute w-full flex place-content-center mt-32 font-semibold;
+  @apply absolute w-full flex place-content-center mt-32 font-semibold;
 
-    /* @apply bg-blue-500; */
+  /* @apply bg-blue-500; */
 }
 
 #subtitle-wrapped p {
-    @apply font-sans text-center w-4/5 text-white mt-5;
+  @apply font-sans text-center w-4/5 text-white mt-5;
 }
 
 /* #bottom-info button {
@@ -1129,7 +914,22 @@ footer #sub-footer-zip {
  */
 
 #backhome {
-    @apply block text-tallesBlueLight underline font-semibold px-5percenet;
+  @apply block text-tallesBlueLight underline font-semibold px-5percenet;
 }
 
 /*_____________________________________________________FIM CARD ANIMADO _______________________________________*/
+
+/*----------------------------------------------------GRID CONTAINER CONQUISTAS*/
+
+#grid-container-conquistas {
+  background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
+    url("../Image/Img_Hero/YYYY.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#grid-container-conquistas h1 {
+}
+
+/*_________________________________________________*/
