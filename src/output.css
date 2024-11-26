@@ -1554,7 +1554,8 @@ nav a:hover{
 }
 
 .info-about-wrapped img{
-  width: 24rem;
+  width: 480px;
+  border-radius: 0.75rem;
 }
 
 @media (max-width: 1300px){
