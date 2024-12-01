@@ -56,6 +56,12 @@ module.exports = {
             transform: "translateY(-100%) scale(0.5)",
           },
         },
+
+        lateralSpin: {
+          "0%": { transform: "rotate3d(0, 0, 0, 0)" },
+
+          "100%": { transform: "rotate3d(0, 1, 0, 360deg)" },
+        },
       },
 
       animation: {
@@ -67,6 +73,7 @@ module.exports = {
         floatImage: "floatImage 3s 0.2s ease-in-out infinite",
         cloudLeft: "cloudLeft 32s linear infinite",
         scrolling: "scrolling 15s linear infinite",
+        lateralSpin: "lateralSpin 2.5s 0.1s linear infinite",
       },
 
       //___________________________________ FIM ANIMAÇÕES ____________________________________________________
@@ -119,12 +126,16 @@ module.exports = {
         // Telas adaptáveis para RESULTADOS
         tablRes: { max: "1029px" },
         mobRes: { max: "450px" },
+        mobileResultado: { max: "325px" },
 
         // Telas adaptáveis para FEEDBACK
         tablFD: { max: "1023px" },
         mobFD: { max: "639px" },
         deskIcone: { min: "1023px" },
         mobBtn: { max: "700px" },
+
+        // Breakpoints da aba CONQUISTAS
+        conqHero: { max: "1400px" },
       },
 
       spacing: {

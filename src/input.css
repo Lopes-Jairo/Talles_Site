@@ -549,7 +549,7 @@ nav a {
 
 /* ----CONTAINER PARA NOVA ABA RESULTADOS */
 #container-meus-resultados {
-  @apply flex gap-2;
+  @apply flex gap-2 mobileResultado:flex-col;
 
   /* MARCAÇÃO */
   /* @apply bg-yellow-500 p-3; */
@@ -557,7 +557,7 @@ nav a {
 
 #container-meus-resultados a {
   @apply block p-3 font-semibold text-tallesBlackBlack bg-tallesBlueLight animate-pulse;
-  @apply rounded;
+  @apply rounded mobileResultado:flex justify-center;
 }
 
 /*------- USANDO OS INPUTS PARA MOSTRAR AS IMAGENS*/
@@ -919,7 +919,7 @@ footer #sub-footer-zip {
 
 /*_____________________________________________________FIM CARD ANIMADO _______________________________________*/
 
-/*----------------------------------------------------GRID CONTAINER CONQUISTAS*/
+/*----------------------------------------------------PÁGINA DE CONQUISTAS*/
 
 #grid-container-conquistas {
   background: linear-gradient(to right, rgb(32, 30, 30, 0.9), #201e1e),
@@ -929,7 +929,129 @@ footer #sub-footer-zip {
   background-size: cover;
 }
 
-#grid-container-conquistas h1 {
+.et {
+  @apply flex justify-center items-center p-6 text-2xl font-bold;
 }
 
-/*_________________________________________________*/
+.bloco {
+  @apply rounded-lg border border-gray-700;
+}
+
+/* GRID-CONTAINER CONQUISTAS */
+#grid-container-conquistas {
+  @apply grid grid-cols-8 grid-rows-3 gap-5 pt-10 px-2;
+}
+
+/* -------------------- CABECALHO HEADER CONQUISTAS */
+#grid-container-conquistas #cabecalho-conquistas {
+  @apply flex flex-col gap-8 p-5 col-span-4 col-start-3 row-span-1;
+
+  /* breakpoints */
+  @apply conqHero:col-start-3 conqHero:col-span-6 conqHero:row-start-1;
+
+  /* MARCAÇÃO */
+  @apply bg-purple-500;
+}
+
+#cabecalho-conquistas h1 {
+  @apply text-3xl font-semibold text-tallesBlueLight bg-tallesBlackBlack text-center p-2 bloco;
+}
+
+#cabecalho-conquistas div#detalhes-conquistas {
+  @apply flex flex-col gap-5;
+
+  /* MARCAÇÃO */
+  @apply bg-amber-500 p-5;
+}
+
+div#detalhes-conquistas p {
+  @apply text-tallesGrayLight font-semibold;
+
+  /* MARCAÇÃO */
+  @apply bg-rose-600;
+}
+
+div#detalhes-conquistas article {
+  @apply flex flex-col items-baseline relative overflow-hidden rounded z-10 p-5;
+
+  /* gradient */
+  @apply bg-gradient-to-b from-tallesBlackBlack to-sky-950;
+
+  /* MARCAÇÃO */
+  @apply bg-lime-600 p-5;
+}
+
+div#detalhes-conquistas article h2 {
+  @apply flex justify-center items-center gap-2 text-white font-semibold text-xl;
+}
+
+div#detalhes-conquistas article h2 i {
+  @apply text-yellow-400 text-2xl animate-lateralSpin;
+}
+
+/* ______________________ FIM DO CABECALHO HEADER CONQUISTAS */
+
+/* ------------------------------- ASIDES CONQUISTAS */
+#grid-container-conquistas #aside1 {
+  @apply col-span-2 row-span-2;
+
+  /* breakpoint */
+  @apply conqHero:row-span-1;
+
+  /* MARCAÇÃO */
+  @apply bg-sky-400 p-1;
+}
+
+#aside1 video {
+  @apply w-full h-full rounded-lg;
+}
+
+/* ________________________________ FIM ASIDES CONQUISTAS */
+
+/* ------------------------------- BLOCOS DE FOTOS CONQUISTAS */
+
+#grid-container-conquistas img {
+  @apply w-full;
+}
+
+#grid-container-conquistas #bloco1 {
+  @apply col-start-7 col-span-2 row-start-1;
+
+  /* breakpoint */
+  @apply conqHero:row-start-2 conqHero:col-start-3 conqHero:col-span-2;
+
+  /* MARCAÇÃO */
+  @apply bg-green-400 p-5;
+}
+
+#grid-container-conquistas #bloco2 {
+  @apply col-start-7 col-span-2;
+
+  /* breakpoint */
+  @apply conqHero:col-start-5 conqHero:col-span-2;
+
+  /* MARCAÇÃO */
+  @apply bg-rose-400 p-5;
+}
+
+#grid-container-conquistas #bloco3 {
+  @apply col-start-3 col-span-2 row-start-2;
+
+  /* breakpoint */
+  @apply conqHero:col-start-1;
+
+  /* MARCAÇÃO */
+  @apply bg-yellow-400 p-5;
+}
+
+#grid-container-conquistas #bloco4 {
+  @apply col-start-5 col-span-2 row-start-2;
+
+  /* breakpoint */
+  @apply conqHero:col-start-7;
+
+  /* MARCAÇÃO */
+  @apply bg-blue-100 p-5;
+}
+
+/* ______________________________________ FIM DE BLOCOS DE FOTOS CONQUISTAS */
