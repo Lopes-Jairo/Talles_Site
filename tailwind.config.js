@@ -136,12 +136,6 @@ module.exports = {
 
         // Breakpoints da aba CONQUISTAS
         conqHero: { max: "1400px" },
-        conqtbl: { max: "950px" },
-        conqdesk: { min: "1300px" },
-        conq1: { min: "951px", max: "1100px" },
-        conq2: { min: "1101px", max: "1299px" },
-        conq3: { min: "1300px", max: "1399px" },
-        conq4: { min: "1400px", max: "1600px" },
       },
 
       spacing: {

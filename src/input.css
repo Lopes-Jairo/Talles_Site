@@ -939,7 +939,7 @@ footer #sub-footer-zip {
 
 /* GRID-CONTAINER CONQUISTAS */
 #grid-container-conquistas {
-  @apply grid grid-cols-8 gap-5 pt-10 px-2;
+  @apply grid grid-cols-8 grid-rows-3 gap-5 pt-10 px-2;
 }
 
 /* -------------------- CABECALHO HEADER CONQUISTAS */
@@ -947,10 +947,10 @@ footer #sub-footer-zip {
   @apply flex flex-col gap-8 p-5 col-span-4 col-start-3 row-span-1;
 
   /* breakpoints */
-  @apply conqHero:col-start-3 conqHero:col-span-6 conqHero:row-start-1 conqtbl:col-span-full;
+  @apply conqHero:col-start-3 conqHero:col-span-6 conqHero:row-start-1;
 
   /* MARCAÇÃO */
-  /* @apply bg-purple-500; */
+  @apply bg-purple-500;
 }
 
 #cabecalho-conquistas h1 {
@@ -960,47 +960,29 @@ footer #sub-footer-zip {
 #cabecalho-conquistas div#detalhes-conquistas {
   @apply flex flex-col gap-5;
 
-  /* breakpoint */
-  @apply tblabout:items-center;
-
   /* MARCAÇÃO */
-  /* @apply bg-amber-500 p-5; */
+  @apply bg-amber-500 p-5;
 }
 
 div#detalhes-conquistas p {
   @apply text-tallesGrayLight font-semibold;
 
   /* MARCAÇÃO */
-  /* @apply bg-rose-600; */
+  @apply bg-rose-600;
 }
 
 div#detalhes-conquistas article {
-  @apply flex flex-col rounded p-5;
+  @apply flex flex-col items-baseline relative overflow-hidden rounded z-10 p-5;
 
   /* gradient */
   @apply bg-gradient-to-b from-tallesBlackBlack to-sky-950;
 
-  /* breakpoints */
-  @apply conqtbl:items-center tblabout:items-center tblabout:w-fit;
-
   /* MARCAÇÃO */
-  /* @apply bg-lime-600 p-5; */
-}
-
-div#detalhes-conquistas article #alinhador {
-  @apply conqdesk:flex gap-3;
-
-  /* breakpoint */
-  @apply conqtbl:w-fit conqtbl:flex conqtbl:flex-col conqtbl:items-start tblabout:w-fit tblabout:flex tblabout:flex-col tblabout:items-start;
-  /* MARCAÇÃO */
-  /* @apply p-2 bg-sky-200; */
+  @apply bg-lime-600 p-5;
 }
 
 div#detalhes-conquistas article h2 {
   @apply flex justify-center items-center gap-2 text-white font-semibold text-xl;
-
-  /* breakpoint */
-  @apply smhero:!text-sm mobFD:text-lg;
 }
 
 div#detalhes-conquistas article h2 i {
@@ -1014,26 +996,14 @@ div#detalhes-conquistas article h2 i {
   @apply col-span-2 row-span-2;
 
   /* breakpoint */
-  @apply conqHero:row-span-1 smhero:!col-span-full smhero:p-5;
-  @apply conqtbl:col-start-5 conqtbl:block conqtbl:col-span-4;
+  @apply conqHero:row-span-1;
 
   /* MARCAÇÃO */
-  /* @apply bg-sky-400; */
+  @apply bg-sky-400 p-1;
 }
 
 #aside1 video {
   @apply w-full h-full rounded-lg;
-}
-
-#aside1 video#video-completo {
-  @apply conqtbl:hidden;
-}
-
-#aside1 video#video-cortado {
-  @apply hidden;
-
-  /*breakpoint*/
-  @apply conqtbl:block;
 }
 
 /* ________________________________ FIM ASIDES CONQUISTAS */
@@ -1044,48 +1014,44 @@ div#detalhes-conquistas article h2 i {
   @apply w-full;
 }
 
-#grid-container-conquistas img.bloco {
-  @apply conq1:h-[230px] conq2:h-[270px] conq3:h-[300px] conq4:h-[340px];
-}
-
 #grid-container-conquistas #bloco1 {
   @apply col-start-7 col-span-2 row-start-1;
 
   /* breakpoint */
-  @apply conqHero:row-start-2 conqHero:col-start-3 conqHero:col-span-2 smhero:hidden;
-  @apply conqtbl:col-span-4 conqtbl:col-start-1;
+  @apply conqHero:row-start-2 conqHero:col-start-3 conqHero:col-span-2;
+
   /* MARCAÇÃO */
-  /* @apply bg-green-400; */
+  @apply bg-green-400 p-5;
 }
 
 #grid-container-conquistas #bloco2 {
   @apply col-start-7 col-span-2;
 
   /* breakpoint */
-  @apply conqHero:col-start-5 conqHero:col-span-2 conqtbl:hidden;
+  @apply conqHero:col-start-5 conqHero:col-span-2;
 
   /* MARCAÇÃO */
-  /* @apply bg-rose-400 p-5; */
+  @apply bg-rose-400 p-5;
 }
 
 #grid-container-conquistas #bloco3 {
   @apply col-start-3 col-span-2 row-start-2;
 
   /* breakpoint */
-  @apply conqHero:col-start-1 conqtbl:hidden;
+  @apply conqHero:col-start-1;
 
   /* MARCAÇÃO */
-  /* @apply bg-yellow-400 p-5; */
+  @apply bg-yellow-400 p-5;
 }
 
 #grid-container-conquistas #bloco4 {
   @apply col-start-5 col-span-2 row-start-2;
 
   /* breakpoint */
-  @apply conqHero:col-start-7 conqtbl:hidden;
+  @apply conqHero:col-start-7;
 
   /* MARCAÇÃO */
-  /* @apply bg-blue-100 p-5; */
+  @apply bg-blue-100 p-5;
 }
 
 /* ______________________________________ FIM DE BLOCOS DE FOTOS CONQUISTAS */
