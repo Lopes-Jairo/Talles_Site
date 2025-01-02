@@ -766,14 +766,14 @@ video {
   align-self: center;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -790,14 +790,19 @@ video {
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
-.text-tallesBlueLight{
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(51 153 255 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+
+.text-tallesGrayLight{
+  --tw-text-opacity: 1;
+  color: rgb(181 198 210 / var(--tw-text-opacity, 1));
 }
 
 .filter{
@@ -1990,7 +1995,9 @@ nav a:hover{
   /* @apply bg-yellow-600 p-2; */
 }
 
-.mid-card-plans .star-icon-wrapped {
+.mid-card-plans .star-icon-wrapped{
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .star-icon-wrapped i{

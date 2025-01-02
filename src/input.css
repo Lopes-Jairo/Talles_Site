@@ -429,6 +429,7 @@ nav a {
 }
 
 .mid-card-plans .star-icon-wrapped {
+  @apply !text-3xl;
 }
 
 .star-icon-wrapped i {
